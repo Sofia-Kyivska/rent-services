@@ -1,0 +1,96 @@
+{
+  "Header": {
+    "headerSale": "Погодинно від 1 до 3 годин - 500 грн., кожна наступна година + 100 грн.",
+    "linkApartments": "Апартаменти",
+    "linkRules": "Правила",
+    "linkContact": "Контакти"
+  },
+  "MainPage": {
+    "SeoTitleH1": "Оренда квартири Київ. Київ квартири. Зняти квартиру Київ. Киев.",
+    "heroTitle": "Подобова та погодинна оренда квартир",
+    "heroSubTitle": "На Софіївській Борщагівці",
+    "galleryTittle": "Апартаменти"
+  },
+  "ApartmentsPage": {
+    "SeoTitleH1": "Оренда квартири Київ. Київ квартири. Зняти квартиру Київ. Киев.",
+    "SeoTitleH2": "Навігація",
+    "Title": "Що буде в апартаментах?",
+    "OneRoom": "Однокімнатні",
+    "TwoRoom": "Двокімнатні",
+    "ThreeRoom": "Трикімнатні",
+    "OneAndTwoRoom": "Однокімнатні та двокімнатні",
+    "OneAndThreeRoom": "Однокімнатні та трикімнатні",
+    "TwoAndThreeRoom": "Двокімнатні та трикімнатні",
+    "NotFound": "Квартири не знайдено",
+    "TextOfDescAdress": "-кім. кв.",
+    "TextOfDescOptions": "Що буде в апартаментах",
+    "PricePeriod": "доба"
+  },
+  "ApartIdItem": {
+    "SeoTitleH1": "Оренда квартири Київ. Київ квартири. Зняти квартиру Київ. Киев.",
+    "SeoTitleH2": "Навігація",
+    "SeoTitleH3": "Детальна інформація про апартаменти",
+    "SeoTitleH4": "Детальна інформація про зручності",
+    "SeoTitleItemSliderH4": "Детальні зображення квартири",
+    "TextWelcome": "Ласкаво просимо до SofiaRent."
+  },
+  "RulesPage": {
+    "SeoTitleH1": "Оренда квартири Київ. Київ квартири. Зняти квартиру Київ. Киев.",
+    "SeoTitleH2": "Навігація",
+    "MainTitle": "Правила проживання",
+    "TitleSection1": "Правила поведінки в квартирі:",
+    "TitleSection2": "Категорично забороняється:",
+    "TitleSection3": "Адміністрація має право негайно виселити орендаря без повернення грошей за проживання у разі:"
+  },
+  "Navigation": {
+    "MainPage": "Головна",
+    "Apartments": "Апартаменти",
+    "Rules": "Правила"
+  },
+  "BreadCrumbs": {
+    "BackLink": "Назад"
+  },
+  "Buttons": {
+    "CalltBtn": "Зв’язатись",
+    "OrderBtn": "Забронювати",
+    "CloseBtn": "Ok",
+    "CardDetailsBtn": "Детальніше",
+    "FilterBtn": "Шукати",
+    "FilterClear": "Очистити",
+    "FilterQuantRooms": "-кім.",
+    "FilterSleepingPlaces": "Спальні місця",
+    "ObjectsBtn": "Всі об’єкти",
+    "OpenFilterBtn": "Фільтр",
+    "CloseFilterBtn": "Сховати",
+    "LogOutBtn": "Вийти",
+    "Submit": "Пiдтвердити"
+  },
+  "Form": {
+    "SeoTitleH3": "Оренда квартири Київ. Київ квартири. Зняти квартиру Київ. Киев.",
+    "name": "Ваше ім’я",
+    "phone": "Номер телефону",
+    "fieldDateOfEntry": "Дата заїзду",
+    "fieldDepartureDate": "Дата виїзду",
+    "fieldNumberObject": "Номер об’єкту",
+    "plcHolderDateOfEntry": "Вказати дату",
+    "plcHolderDepartureDate": "Вказати дату",
+    "plcHolderNumberOfObject": "Вкажіть номер об’єкту",
+    "fieldsDesc": "обовʼязково для заповнення",
+    "formSubmitedMsg1": "Ваша заявка успішно відправлена!",
+    "formSubmitedMsg2": "Наш менеджер зв’яжеться з Вами найближчим часом.",
+    "fieldRequiredMsg": "Заповніть це поле",
+    "errorShortName": "Ім’я має бути довшим",
+    "errorLongName": "Ім’я має бути коротшим",
+    "errorNumberOfObject": "Такого номеру немає",
+    "errorNumberOfObject2": "Тільки додатні числа",
+    "errorNumberOfObject3": "Тільки цифри",
+    "errorTooManySpases": "Забагато пробілів"
+  },
+  "formErrors": {
+    "name": "Невірно введене ім’я",
+    "phone": "Номер телефону",
+    "dateOfEntry": "Оберіть дату",
+    "departureDate": "Оберіть дату",
+    "numberObject": "Вкажіть номер об’єкту"
+  }
+}

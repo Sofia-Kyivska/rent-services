@@ -1,0 +1,130 @@
+@import "../../../../styles/_variables.scss";
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1920px;
+
+  @media screen and (min-width: $tablet) {
+    align-items: normal;
+    justify-content: normal;
+  }
+}
+
+.displaySizeMessage {
+  width: 90%;
+  font-size: clamp(16px, 4vw, 30px);
+  font-weight: 700;
+  color: $Error;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.contentWrapper {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.apartment {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    background-color: $Primary400;
+    border-radius: 5px;
+    border: 1px solid $Primary900;
+    width: calc(50% - 12px);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc(50% - 24px);
+  }
+}
+
+.objNumber {
+  color: $Error;
+}
+
+.property {
+  font-weight: 600;
+}
+
+.imgsWrapper {
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.imgsItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.imgCont {
+  width: 200px;
+  height: 100px;
+  position: relative;
+}
+
+.deleteIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.deleteIcon:hover {
+  cursor: pointer;
+  fill: $Error;
+}
+
+.locationLink,
+.absentBookingLink {
+  font-weight: 400;
+}
+
+.platformLink {
+  display: block;
+  overflow: hidden;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.descriptionItem:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.overHid {
+  overflow: hidden;
+}

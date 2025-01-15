@@ -1,0 +1,91 @@
+@import '../../../styles/_variables.scss';
+
+.langSwitcherContainer {
+
+  @media screen and (min-width: $desktop) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.langTitle {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    position: relative;
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.7;
+    color: $Primary900;
+    box-shadow: 4px 4px 8px 0 rgba(246, 246, 244, 0.25);
+    background-color: $SecondaryColor;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 2px 8px;
+    z-index: 10;
+  }
+}
+
+.langSwitcherOpen {
+
+  @media screen and (min-width: $desktop) {
+    background-color: $Primary800;
+    transform: translateY(45%);
+    opacity: 1;
+  }
+}
+
+.langSwitcherClose {
+
+  @media screen and (min-width: $desktop) {
+    background-color: transparent;
+    transform: translateY(-20%);
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+  }
+}
+
+.langSwitcher {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    bottom: -40px;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 25px 8px 2px 8px;
+    row-gap: 6px;
+  }
+}
+
+.langSwitcherItem {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $SecondaryColor;
+  cursor: pointer;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+}
+
+.langSwitcherActive {
+  padding: 2px 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  box-shadow: 4px 4px 8px 0 rgba(246, 246, 244, 0.25);
+  background-color: $SecondaryColor;
+  color: $Primary900;
+  border-radius: 12px;
+}

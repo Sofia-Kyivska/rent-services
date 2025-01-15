@@ -1,0 +1,102 @@
+@import "../../styles/_variables.scss";
+
+.new {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(50% - 12px);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc(50% - 24px);
+  }
+}
+
+.input,
+.textarea {
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid $Primary400;
+  border-radius: 3px;
+  color: $Primary900;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.uploadBtn {
+  height: 45px;
+  padding: 10px;
+  background-color: $dashboardBtnBgColor;
+  border-radius: 3px;
+  border-color: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.uploadBtn:hover {
+  background-color: $dashboardHoverBtnBgColor;
+}
+
+fieldset.roomsQuantity,
+fieldset.bedsQuantity {
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 10px;
+}
+
+fieldset.amenities {
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.amenities input {
+  margin-right: 10px;
+}
+
+.button {
+  height: 45px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: $Primary400;
+  cursor: not-allowed;
+}
+
+.sendBtn {
+  background-color: $dashboardBtnBgColor;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sendBtn:hover {
+  background-color: $dashboardHoverBtnBgColor;
+}
+
+.error {
+  color: $Error;
+}

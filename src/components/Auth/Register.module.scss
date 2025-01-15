@@ -1,0 +1,92 @@
+@import "../../styles//variables";
+
+.container {
+  max-width: 1920px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.displaySizeMessage {
+  width: 90%;
+  font-size: clamp(16px, 4vw, 30px);
+  font-weight: 700;
+  color: $Error;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.contentWrapper {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.form {
+  width: 400px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input {
+  padding: 20px;
+  background-color: transparent;
+  border: 2px solid $Primary400;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.registerBtn {
+  padding: 20px;
+  background-color: $Primary800;
+  color: $Primary600;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  font-family:var(--font--lato);
+  font-weight: bold;
+  cursor: not-allowed;
+}
+
+.active {
+  cursor: pointer;
+  background-color: $dashboardBtnBgColor;
+  color: $Primary900;
+}
+
+.active.registerBtn:hover {
+  background-color: $dashboardHoverBtnBgColor;
+}
+
+.error {
+  color: $Error;
+}

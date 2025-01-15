@@ -1,0 +1,82 @@
+@import "@/styles/_variables.scss";
+
+.breadCrumbsWrapper {
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 24px;
+  }
+}
+
+.rulesTitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+}
+
+.block:not(:last-child) {
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 16px;
+  }
+}
+
+.blockTitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+}
+
+.blockList {
+  list-style: decimal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+}
+
+.blockList>li {
+  margin-left: 20px;
+
+  @media (min-width: $tablet) {
+    margin-left: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 28px;
+  }
+}

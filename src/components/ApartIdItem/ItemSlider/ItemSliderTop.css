@@ -1,0 +1,103 @@
+.ItemSliderTop {
+  width: 100%;
+  margin-bottom: 12px;
+  height: 66.6vw;
+}
+
+.ItemSliderTop .swiper-slide {
+  width: 300px;
+  height: 300px;
+  height: 100%;
+}
+
+.ItemSliderTop .swiper-slide img {
+  object-fit: cover;
+  object-position: center;
+
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: none;
+  -o-transform: translate3d(0, 0, 0);
+  transform: none;
+}
+
+.ItemSliderTop .swiper-button-prev,
+.ItemSliderTop .swiper-button-next {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  color: transparent;
+  bottom: 8px;
+  top: auto;
+}
+
+.ItemSliderTop .swiper-button-prev::after,
+.ItemSliderTop .swiper-button-next::after {
+  width: 100%;
+}
+
+.ItemSliderTop .swiper-button-prev {
+  background-image: url("../../../../public/webp/schevron_left.webp");
+  left: 50%;
+  transform: translateX(-75px);
+}
+
+.ItemSliderTop .swiper-button-next {
+  background-image: url("../../../../public/webp/schevron_right.webp");
+  left: 50%;
+  transform: translateX(50px);
+}
+
+.ItemSliderTop .swiper-pagination {
+  bottom: 14px;
+}
+
+.ItemSliderTop .swiper-pagination-bullet {
+  background-color: rgba(249, 246, 248, 1);
+  width: 12px;
+  height: 12px;
+}
+
+.ItemSliderTop .swiper-pagination-bullet-active-prev,
+.ItemSliderTop .swiper-pagination-bullet-active-next,
+.ItemSliderTop .swiper-pagination-bullet-active-prev-prev,
+.ItemSliderTop .swiper-pagination-bullet-active-next-next {
+  opacity: 1;
+}
+
+
+@media screen and (min-width: 768px) {
+  .ItemSliderTop {
+    height: 35.8vw;
+    margin-bottom: 20px;
+  }
+
+  .ItemSliderTop .swiper-pagination {
+    bottom: 40px;
+  }
+
+  .ItemSliderTop .swiper-button-prev,
+  .ItemSliderTop .swiper-button-next {
+    bottom: 34px;
+  }
+}
+
+
+@media screen and (min-width: 1366px) {
+  .ItemSliderTop {
+    height: 32.8vw;
+    max-height: 630px;
+    margin-bottom: 16px;
+  }
+
+  .ItemSliderTop .swiper-button-prev,
+  .ItemSliderTop .swiper-button-next {
+    bottom: 14px;
+  }
+
+  .ItemSliderTop .swiper-pagination {
+    bottom: 20px;
+  }
+}

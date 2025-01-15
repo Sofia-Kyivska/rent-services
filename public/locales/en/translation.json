@@ -1,0 +1,96 @@
+{
+  "Header": {
+    "headerSale": "Hourly from 1 to 3 hours - 500 UAH, for each extra hour + 100 UAH",
+    "linkApartments": "Apartments",
+    "linkRules": "Rules",
+    "linkContact": "Contact"
+  },
+  "MainPage": {
+    "SeoTitleH1": "Rent a flat Sumy. Sumy flat. Rent a flat Sumy. Sumy.",
+    "heroTitle": "Daily and hourly rent of apartments",
+    "heroSubTitle": "On Sofiivska Borshchagivka",
+    "galleryTittle": "Apartments"
+  },
+  "ApartmentsPage": {
+    "SeoTitleH1": "Rent a flat Sumy. Sumy flat. Rent a flat Sumy. Sumy.",
+    "SeoTitleH2": "Navigation",
+    "Title": "What will be in the apartment?",
+    "OneRoom": "One-room",
+    "TwoRoom": "Two-room",
+    "ThreeRoom": "Three-room",
+    "OneAndTwoRoom": "One-room and two-room",
+    "OneAndThreeRoom": "One-room and three-room",
+    "TwoAndThreeRoom": "Two-room and three-room",
+    "NotFound": "apartments not found",
+    "TextOfDescAdress": "-bedroom",
+    "TextOfDescOptions": "What will be in the apartment",
+    "PricePeriod": "day"
+  },
+  "ApartIdItem": {
+    "SeoTitleH1": "Rent a flat Sumy. Sumy flat. Rent a flat Sumy. Sumy.",
+    "SeoTitleH2": "Navigation",
+    "SeoTitleH3": "Detailed information about the apartments",
+    "SeoTitleH4": "Detailed information about the amenities",
+    "SeoTitleItemSliderH4": "Detailed images of the apartment",
+    "TextWelcome": "Welcome to SofiaRent."
+  },
+  "RulesPage": {
+    "SeoTitleH1": "Rent a flat Sumy. Sumy flat. Rent a flat Sumy. Sumy.",
+    "SeoTitleH2": "Navigation",
+    "MainTitle": "Rules of residence",
+    "TitleSection1": "Rules of behavior in the apartment:",
+    "TitleSection2": "This is strictly prohibited:",
+    "TitleSection3": "The administration has the right to immediately evict the tenant without refunding the rent in case of:"
+  },
+  "Navigation": {
+    "MainPage": "Main",
+    "Apartments": "Apartments",
+    "Rules": "Rules"
+  },
+  "BreadCrumbs": {
+    "BackLink": "Back"
+  },
+  "Buttons": {
+    "CalltBtn": "Contact Us",
+    "OrderBtn": "Reservation",
+    "CloseBtn": "Close",
+    "CardDetailsBtn": "Details",
+    "FilterBtn": "Find",
+    "FilterClear": "Clear",
+    "FilterQuantRooms": "-rooms",
+    "FilterSleepingPlaces": "Sleeping places",
+    "ObjectsBtn": "All objects",
+    "OpenFilterBtn": "Filter",
+    "CloseFilterBtn": "Close",
+    "LogOutBtn": "LogOut",
+    "Submit": "Submit"
+  },
+  "Form": {
+    "SeoTitleH3": "Rent a flat Sumy. Sumy flat. Rent a flat Sumy. Sumy.",
+    "name": "Name",
+    "phone": "Phone number",
+    "fieldDateOfEntry": "Date of entry",
+    "fieldDepartureDate": "Departure date",
+    "fieldNumberObject": "Object number",
+    "plcHolderDateOfEntry": "Date of entry",
+    "plcHolderDepartureDate": "Departure date",
+    "plcHolderNumberOfObject": "Number of object",
+    "fieldsDesc": "required fields",
+    "formSubmitedMsg1": "Your application has been successfully sent!",
+    "formSubmitedMsg2": "Our manager will contact you shortly.",
+    "fieldRequiredMsg": "Fill in this field",
+    "errorShortName": "The name should be longer",
+    "errorLongName": "The name should be shorter",
+    "errorNumberOfObject": "There's no such number",
+    "errorNumberOfObject2": "Only positive numbers",
+    "errorNumberOfObject3": "Only numbers",
+    "errorTooManySpases": "Too many spases"
+  },
+  "formErrors": {
+    "name": "Incorrect name entered",
+    "phone": "Phone number",
+    "dateOfEntry": "Choose a date",
+    "departureDate": "Choose a date",
+    "numberObject": "Enter the object number"
+  }
+}

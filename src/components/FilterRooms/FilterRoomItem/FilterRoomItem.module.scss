@@ -1,0 +1,95 @@
+@import "../../../styles/variables";
+
+.filterRoom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: flex-end;
+  -webkit-column-gap: 8px;
+  -moz-column-gap: 8px;
+  column-gap: 8px;
+
+  @media screen and (min-width: $tablet) {
+    -webkit-column-gap: 16px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+  }
+}
+
+.filterRoomText {
+  @media (min-width: 320px) and (max-width: 359px) {
+    font-size: 14px;
+  }
+
+  color: $lightFontColor;
+  font-family: var(--font--lato);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.filterInputCheckbox {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 10px;
+  background: $Primary300;
+  border-radius: 50px;
+
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -3px;
+    left: -3px;
+    width: 16px;
+    height: 16px;
+    background: $lightFontColor;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 2px 8px 0px #00000029;
+    box-shadow: 0px 2px 8px 0px #00000029;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
+.filterInputCheckbox__Checked {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 10px;
+  border-radius: 50px;
+
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  background: $Primary600;
+
+  &::after {
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: $lightFontColor;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 2px 8px 0px #00000029;
+    box-shadow: 0px 2px 8px 0px #00000029;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+}

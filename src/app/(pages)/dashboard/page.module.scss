@@ -1,0 +1,174 @@
+@import "../../../styles/_variables.scss";
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1920px;
+
+  @media screen and (min-width: $tablet) {
+    align-items: normal;
+    justify-content: normal;
+  }
+}
+
+.displaySizeMessage {
+  width: 90%;
+  font-size: clamp(16px, 4vw, 30px);
+  font-weight: 700;
+  color: $Error;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.priorityList {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 24px;
+  }
+}
+
+.contentWrapper {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.apartments {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 12px);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc(50% - 24px);
+  }
+}
+
+.apartment {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px;
+  background-color: $Primary400;
+  border-radius: 5px;
+  border: 1px solid $Primary900;
+}
+
+.apartment:not(:last-child) {
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+}
+
+.objNumber {
+  color: $Error;
+}
+
+.property {
+  font-weight: 600;
+}
+
+.imgsWrapper {
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.imgsCont {
+  width: 200px;
+  height: 100px;
+  position: relative;
+}
+
+.locationLink,
+.absentBookingLink {
+  font-weight: 400;
+}
+
+.platformLink {
+  display: block;
+  overflow: hidden;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.descriptionItem:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.btnsWrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.editLink {
+  display: flex;
+}
+
+.editIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.deleteIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.editIcon:hover {
+  fill: $Warning;
+}
+
+.deleteIcon:hover {
+  cursor: pointer;
+  fill: $Error;
+}
+
+.overHid {
+  overflow: hidden;
+}

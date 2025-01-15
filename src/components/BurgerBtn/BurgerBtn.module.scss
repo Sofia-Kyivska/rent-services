@@ -1,0 +1,73 @@
+@import '../../styles/_variables.scss';
+
+.burgerBtn {
+  position: relative;
+  width: 24px;
+  height: 13px;
+  border: none;
+  background: none;
+  margin-left: auto;
+  margin-right: 0;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lineClose {
+
+  .line {
+
+    &::before {
+      width: 55%;
+    }
+
+    &::after {
+      width: 75%;
+    }
+  }
+}
+
+.line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 2px;
+  background-color: $SecondaryColor;
+  border-radius: 8px;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 2px;
+    background-color: $SecondaryColor;
+    border-radius: 8px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    height: 2px;
+    background-color: $SecondaryColor;
+    border-radius: 8px;
+  }
+}
