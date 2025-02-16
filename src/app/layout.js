@@ -1,23 +1,22 @@
 import './globals.scss';
-import { Lato, Cormorant_Infant } from 'next/font/google';
 import Header from '@/components/Header/Header';
 import { SiteProvider } from '@/context/SiteContext';
 import dynamic from 'next/dynamic';
 import CallBtnFloating from '@/components/CallBtnFloating/CallBtnFloating';
 
-const lato = Lato({
-  weight: ['100', '300', '400', '700', '900'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font--lato',
-});
+// const lato = Lato({
+//   weight: ['100', '300', '400', '700', '900'],
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font--lato',
+// });
 
-const cormorantInfant = Cormorant_Infant({
-  weight: ['300', '400', '500', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font--cormorantInfant',
-});
+// const cormorantInfant = Cormorant_Infant({
+//   weight: ['300', '400', '500', '600', '700'],
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font--cormorantInfant',
+// });
 
 const DynamicFooter = dynamic(() => import('@/components/Footer/Footer'));
 const DynamicToastProvider = dynamic(() => import('@/context/ToastProvider'));
@@ -125,7 +124,7 @@ export default function RootLayout({ children }) {
   // };
   return (
     <html lang="uk-UA">
-      <body className={`${lato.variable} ${cormorantInfant.variable}`}>
+      <body>
         {/* <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
