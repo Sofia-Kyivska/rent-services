@@ -1,5 +1,29 @@
 @import '../styles/variables';
 
+@font-face {
+  font-family: "GothamProRegular";
+  src: url("./fonts/GothamPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GothamProMedium";
+  src: url("./fonts/GothamPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GothamProBold";
+  src: url("./fonts/GothamPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -15,9 +39,9 @@ body {
   min-height: 100vh;
   width: 100%;
   scroll-behavior: smooth;
-  background-color: $SecondaryColor;
-  color: $Primary900;
-  font-family: var(--font--lato);
+  background-color: $Gray-0;
+  color: $Gray-900;
+  font-family: GothamProRegular, sans-serif;  
   --sb-track-color: #f3f3f3;
   --sb-thumb-color: #131112;
   --sb-size: 8px;
@@ -77,34 +101,34 @@ section {
 }
 
 .pageTopSection {
-  padding: 94px 16px 16px;
+  padding: 72px 16px 16px;
 
   @media screen and (min-width: $mobile) {
-    padding: 88px 32px 16px;
+    padding: 72px 32px 16px;
   }
 
   @media screen and (min-width: $tablet) {
-    padding: 98px 40px 20px;
+    padding: 90px 40px 20px;
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 154px 72px 24px;
+    padding: 150px 72px 24px;
   }
 }
 
 .section {
-  padding: 16px;
+  padding: 8px 16px 16px;
 
   @media screen and (min-width: $mobile) {
-    padding: 16px 32px;
+    padding: 8px 32px 16px;
   }
 
   @media screen and (min-width: $tablet) {
-    padding: 20px 40px;
+    padding: 12px 40px 20px;
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 24px 72px;
+    padding: 20px 72px 40px;
   }
 }
 
