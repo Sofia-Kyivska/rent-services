@@ -13,7 +13,6 @@ import { SiteContext } from '@/context/SiteContext';
 import { currentLanguages, navigationData } from '@/data';
 import styles from './Header.module.scss';
 
-
 const Header = () => {
   const session = useSession();
   const pathname = usePathname();
@@ -192,6 +191,5 @@ const Header = () => {
     </header>
   );
 };
-
 
 export default Header;

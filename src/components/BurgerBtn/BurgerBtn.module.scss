@@ -22,9 +22,7 @@
 }
 
 .lineClose {
-
   .line {
-
     &::before {
       width: 55%;
     }
@@ -44,7 +42,7 @@
   align-items: center;
   width: 100%;
   height: 2px;
-  background-color: $SecondaryColor;
+  background-color: $Secondary-800;
   border-radius: 8px;
 
   &::before {
@@ -55,7 +53,7 @@
     right: 0;
     width: 75%;
     height: 2px;
-    background-color: $SecondaryColor;
+    background-color: $Secondary-800;
     border-radius: 8px;
   }
 
@@ -67,7 +65,7 @@
     right: 0;
     width: 55%;
     height: 2px;
-    background-color: $SecondaryColor;
+    background-color: $Secondary-800;
     border-radius: 8px;
   }
 }
