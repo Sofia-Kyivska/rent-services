@@ -1,8 +1,8 @@
 @import '../styles/variables';
 
 @font-face {
-  font-family: "GothamProRegular";
-  src: url("./fonts/GothamPro-Regular.woff2") format("woff2");
+  font-family: "GothamPro";
+  src: url("./fonts/GothamPro.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -41,7 +41,7 @@ body {
   scroll-behavior: smooth;
   background-color: $Gray-0;
   color: $Gray-900;
-  font-family: GothamProRegular, sans-serif;  
+  font-family: GothamPro, sans-serif;  
   --sb-track-color: #f3f3f3;
   --sb-thumb-color: #131112;
   --sb-size: 8px;
