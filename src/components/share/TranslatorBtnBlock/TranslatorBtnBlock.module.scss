@@ -1,7 +1,6 @@
-@import '../../../styles/_variables.scss';
+@import '@/styles/_variables.scss';
 
 .langSwitcherContainer {
-
   @media screen and (min-width: $desktop) {
     position: relative;
     display: flex;
@@ -16,12 +15,13 @@
   @media screen and (min-width: $desktop) {
     position: relative;
     display: block;
+    font-family: GothamPro, sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 1.7;
-    color: $Primary900;
-    box-shadow: 4px 4px 8px 0 rgba(246, 246, 244, 0.25);
-    background-color: $SecondaryColor;
+    color: $Gray-0;
+    box-shadow: 2px 2px 4px 0 rgba(69, 73, 67, 0.25);
+    background: $Secondary-800;
     border: none;
     outline: none;
     cursor: pointer;
@@ -32,16 +32,14 @@
 }
 
 .langSwitcherOpen {
-
   @media screen and (min-width: $desktop) {
-    background-color: $Primary800;
+    background-color: $Primary-500;
     transform: translateY(45%);
     opacity: 1;
   }
 }
 
 .langSwitcherClose {
-
   @media screen and (min-width: $desktop) {
     background-color: transparent;
     transform: translateY(-20%);
@@ -55,6 +53,8 @@
   display: flex;
   align-items: center;
   column-gap: 16px;
+  background-color: $Primary-500;
+  border-radius: 12px;
 
   @media screen and (min-width: $desktop) {
     position: absolute;
@@ -67,10 +67,11 @@
 }
 
 .langSwitcherItem {
+  font-family: GothamPro, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
-  color: $SecondaryColor;
+  color: $Secondary-800;
   cursor: pointer;
 
   @media screen and (min-width: $desktop) {
@@ -80,12 +81,12 @@
 }
 
 .langSwitcherActive {
+  font-family: GothamPro, sans-serif;
   padding: 2px 8px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
-  box-shadow: 4px 4px 8px 0 rgba(246, 246, 244, 0.25);
-  background-color: $SecondaryColor;
-  color: $Primary900;
+  background-color: $Secondary-800;
+  color: $Gray-0;
   border-radius: 12px;
 }

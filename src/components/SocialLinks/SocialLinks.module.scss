@@ -52,8 +52,8 @@
     height: 22px;
 
     border-radius: 50%;
-    box-shadow: 2px 2px 4px 0 rgba(246, 246, 244, 0.25);
-    background-color: $Primary50;
+    box-shadow: 2px 2px 4px 0 rgba(69, 73, 67, 0.25);
+    background-color: $Primary-500;
 
     @media screen and (min-width: $mobile) {
       width: 24px;
@@ -90,7 +90,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
-    color: $Primary50;
+    color: $Gray-900;
   }
 
   @media screen and (min-width: $desktop) {

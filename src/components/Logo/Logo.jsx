@@ -1,12 +1,10 @@
 import React from 'react';
-import logo from '/public/logo.png';
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './Logo.module.scss';
-
+import { useWindowResize } from '@/hooks/useWindowResize';
 
 const Logo = ({ className }) => {
-
+  const { isDesktop } = useWindowResize();
 
   return (
     <Link
@@ -14,16 +12,17 @@ const Logo = ({ className }) => {
       prefetch={false}
       className={styles.container + ' ' + `${className}`}
     >
-      <Image
-        src={logo}
-        alt="Логотип"
-        fill={true}
-        style={{ cursor: 'pointer' }}
-        sizes="(max-width: 1365px) 85px, 212px"
-      />
+      <svg>
+        <use
+          href={
+            !isDesktop
+              ? 'sprite.svg#icon-logoWhiteSmall'
+              : 'sprite.svg#icon-logoWhiteBig'
+          }
+        />
+      </svg>
     </Link>
   );
 };
-
 
 export default Logo;

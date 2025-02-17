@@ -1,4 +1,4 @@
-@import '../../styles/_variables.scss';
+@import '@/styles/_variables.scss';
 
 .container {
   position: fixed;
@@ -20,7 +20,7 @@
   justify-content: center;
   width: 100%;
 
-  color: $Primary900;
+  color: $Gray-0;
   font-size: clamp(12px, 1.8vw, 16px);
   font-style: normal;
   font-weight: 400;
@@ -28,7 +28,7 @@
   letter-spacing: 0.3px;
   text-align: center;
 
-  background-color: $SecondaryColor;
+  background-color: $Secondary-800;
 
   height: 32px;
   padding: 0 8px;
@@ -51,7 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $Primary900;
+  background-color: $Primary-50;
   padding: 0px 16px;
 
   @media screen and (min-width: $mobile) {
@@ -103,10 +103,9 @@
   z-index: 1;
 
   & a {
+    font-family: GothamProBold, sans-serif;
     font-size: clamp(0.75rem, 0.179rem + 1.19vw, 1.25rem);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-weight: 700;
   }
 
   @media screen and (min-width: $tablet) {
@@ -123,13 +122,13 @@
 .leftLinks {
   margin-left: 0;
   margin-right: auto;
-  color: $SecondaryColor;
+  color: $Gray-900;
 }
 
 .rightLinks {
   margin-right: 0;
   margin-left: auto;
-  color: $SecondaryColor;
+  color: $Gray-900;
 }
 
 .translatorContainer {
@@ -173,7 +172,7 @@
   height: 0px;
   overflow: hidden;
 
-  color: $SecondaryColor;
+  color: $Gray-0;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -210,7 +209,7 @@
   height: -moz-fit-content;
   height: fit-content;
   padding: 18px 0 60px 0;
-  background-color: $Primary900;
+  background-color: $Primary-900;
 
   & li {
     transform: translateY(0);
