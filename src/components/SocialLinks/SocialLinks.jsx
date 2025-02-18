@@ -1,12 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
 import { socialLinks } from '@/data/socialLinks';
 import styles from './SocialLinks.module.scss';
 
-
 const SocialLinks = ({ className }) => {
-
-
   return (
     <ul className={styles.socialLinks + ' ' + `${className}`}>
       {socialLinks.map((item) => {
@@ -20,13 +16,9 @@ const SocialLinks = ({ className }) => {
               })}
               className={styles.socialIcon}
             >
-              <Image
-                src={item.img}
-                fill={true}
-                alt={item.title}
-                title={item.title}
-                sizes="(max-width: 768px) 18px, (max-width: 1200px) 32px"
-              />
+              <svg>
+                <use href={item.icon} />
+              </svg>
             </a>
             {item.title === 'Telephone' && (
               <a href={item.href} className={styles.phone}>
@@ -39,6 +31,5 @@ const SocialLinks = ({ className }) => {
     </ul>
   );
 };
-
 
 export default SocialLinks;

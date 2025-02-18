@@ -123,6 +123,8 @@ const Header = () => {
       </div>
       <div className={styles.navBarContainer}>
         <div className={`${styles.navBar} container`}>
+          <Logo className={styles.logo} isClient={isClient} />
+
           {!isMobile && (
             <div className={styles.leftLinks}>
               {!isLoading &&
@@ -132,8 +134,8 @@ const Header = () => {
                     href={item.path}
                     className={
                       pathname === item.path
-                        ? 'activeLink'
-                        : ' textLinkAnimation'
+                        ? styles.activeLink
+                        : styles.textLinkAnimation
                     }
                   >
                     {(i18n.language === currentLanguages.EN && item.titleEn) ||
@@ -155,17 +157,17 @@ const Header = () => {
 
           {isMobile && <SocialLinks />}
 
-          <Logo className={styles.logo} isClient={isClient} />
-
           {isMobile && (
-            <BurgerBtn
-              id="burgerBtn"
-              onClick={() => {
-                setBurgerMenu(!burgerMenu);
-              }}
-              burgerMenu={burgerMenu}
-              isClient={isClient}
-            />
+            <div className={styles.burgerBtn}>
+              <BurgerBtn
+                id="burgerBtn"
+                onClick={() => {
+                  setBurgerMenu(!burgerMenu);
+                }}
+                burgerMenu={burgerMenu}
+                isClient={isClient}
+              />
+            </div>
           )}
 
           {session.status === 'authenticated' && !isLoading && (
