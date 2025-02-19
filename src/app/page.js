@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero/Hero';
-
+import HomeApartmensList from '@/components/HomeApartmensList/HomeApartmensList';
 
 export default function Home() {
   // const jsonLd = {
@@ -15,7 +15,6 @@ export default function Home() {
   //   },
   // };
 
-
   return (
     <>
       {/* <script
@@ -23,6 +22,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       /> */}
       <Hero />
+      <HomeApartmensList />
     </>
   );
 }
