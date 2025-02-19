@@ -12,7 +12,7 @@
   -ms-flex-align: center;
   align-items: center;
   padding: 16px 16px;
-  background-color: $Primary900;
+  background-color: $Primary-900;
   overflow-x: hidden;
   justify-content: space-between;
   width: 100%;
@@ -70,10 +70,10 @@
 }
 
 .footerLogo {
-  margin-left: -8px;
+  margin-left: 0px;
 
   @media screen and (min-width: $desktop) {
-    margin-left: -20px;
+    margin-left: -6px;
   }
 }
 

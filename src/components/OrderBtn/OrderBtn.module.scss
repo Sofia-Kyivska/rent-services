@@ -13,13 +13,14 @@
     -ms-flex-align: center;
     align-items: center;
 
-    border-radius: 100px;
-    border: 0.5px solid $Primary800;
-    background: $Primary800;
-    box-shadow: 4px 4px 8px 0px #f6f6f440;
+    border-radius: 8px;
+    border: 0.5px solid transparent;
+    background: $Secondary-800;
+    box-shadow: 2px 2px 4px 0px #45494340;
+
+    
 
     color: $Primary50;
-    // font-family: var(--font--lato);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -30,9 +31,9 @@
     cursor: pointer;
 
     &:hover {
-        background: $Primary50;
-        border-color: $Primary900;
-        color: $Primary900;
+        background: $Primary-50;
+        border-color: $Secondary-800;
+        color: $Secondary-800;
         -webkit-transition-duration: 500ms;
         -o-transition-duration: 500ms;
         transition-duration: 500ms;
@@ -42,7 +43,6 @@
     @media screen and (min-width: $tablet) {
         width: 216px;
         padding: 8px 58px;
-        border-radius: 24px;
         border-width: 1px;
     }
 
