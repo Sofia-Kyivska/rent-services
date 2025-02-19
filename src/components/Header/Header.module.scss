@@ -39,11 +39,13 @@
 
   @media screen and (min-width: $tablet) {
     letter-spacing: 1.7px;
-    height: 22px;
+    height: 30px;
+    // height: 22px;
     padding: 0;
   }
   @media screen and (min-width: $desktop) {
-    height: 30px;
+    height: 50px;
+    // height: 30px;
   }
 }
 
@@ -126,7 +128,7 @@
   z-index: 1;
 
   & a {
-    font-family: GothamProBold, sans-serif;
+    // font-family: GothamProBold, sans-serif;
     font-size: clamp(0.75rem, 0.179rem + 1.19vw, 1.25rem);
     font-weight: 700;
     color: $Gray-900;
