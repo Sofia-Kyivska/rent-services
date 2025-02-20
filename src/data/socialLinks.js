@@ -21,7 +21,7 @@ export const socialLinks = [
   {
     id: v4(),
     title: 'Facebook',
-    subtitle: 'SofiaRent_Kyiv',
+    subtitle: 'Sofia_Rent_Kyiv',
     img: '/social-links/Facebook.webp',
     href: '#',
     icon: '/sprite.svg#facebook-new'
