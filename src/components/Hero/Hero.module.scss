@@ -4,6 +4,7 @@
   position: relative;
   height: 100vh;
   padding-top: 96px;
+  padding-bottom: 40px;
 
   background-image: url('../../../public/webp/HeroDesktop.webp');
   background-size: cover;
@@ -30,6 +31,7 @@
   }
   @media screen and (min-width: $tablet) {
     padding-top: 118px;
+    padding-bottom: 0px;
   }
   @media screen and (min-width: $desktop) {
     padding-top: 202px;
