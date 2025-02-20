@@ -123,7 +123,12 @@ const Header = () => {
       </h3>
       <div className={styles.navBarContainer}>
         <div className={`${styles.navBar} container`}>
-          <Logo className={styles.logo} isClient={isClient} />
+          <Logo
+            className={styles.logo}
+            isClient={isClient}
+            logoSmall="icon-logoWhiteSmall"
+            logoBig="icon-logoWhiteBig"
+          />
 
           {!isMobile && (
             <div className={styles.leftLinks}>

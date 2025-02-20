@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './Logo.module.scss';
 import { useWindowResize } from '@/hooks/useWindowResize';
 
-const Logo = ({ className }) => {
+const Logo = ({ className, logoBig, logoSmall }) => {
   const { isDesktop } = useWindowResize();
 
   return (
@@ -15,9 +15,7 @@ const Logo = ({ className }) => {
       <svg>
         <use
           href={
-            !isDesktop
-              ? 'sprite.svg#icon-logoWhiteSmall'
-              : 'sprite.svg#icon-logoWhiteBig'
+            !isDesktop ? `sprite.svg#${logoSmall}` : `sprite.svg#${logoBig}`
           }
         />
       </svg>
