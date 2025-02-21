@@ -2,7 +2,7 @@ import './globals.scss';
 import Header from '@/components/Header/Header';
 import { SiteProvider } from '@/context/SiteContext';
 import dynamic from 'next/dynamic';
-import CallBtnFloating from '@/components/CallBtnFloating/CallBtnFloating';
+// import CallBtnFloating from '@/components/CallBtnFloating/CallBtnFloating';
 
 // const lato = Lato({
 //   weight: ['100', '300', '400', '700', '900'],
@@ -135,7 +135,7 @@ export default function RootLayout({ children }) {
               <DynamicTranslatorProvider>
                 <Header />
                 <main>{children}</main>
-                <CallBtnFloating />
+                {/* <CallBtnFloating /> */}
                 <DynamicFooter />
               </DynamicTranslatorProvider>
             </DynamicAuthProvider>
