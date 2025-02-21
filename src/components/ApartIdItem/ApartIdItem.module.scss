@@ -5,14 +5,26 @@
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  // row-gap: 16px;
 
   @media screen and (min-width: $tablet) {
-    row-gap: 20px;
+    // row-gap: 20px;
   }
 
   @media screen and (min-width: $desktop) {
-    row-gap: 24px;
+    // row-gap: 24px;
+  }
+}
+
+.crumbs{
+margin-bottom: 12px;
+
+  @media screen and (min-width: $tablet) {
+  margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+margin-bottom: 8px;
   }
 }
 
@@ -28,10 +40,11 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  row-gap: 16px;
+  // row-gap: 16px;
+  padding-bottom: 16px;
 
   @media screen and (orientation: landscape) and (max-width: 767px) {
-    gap: 12px;
+    // gap: 12px;
   }
 
   @media screen and (min-width: $tablet) {
@@ -42,19 +55,35 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
-    row-gap: 0px;
-    column-gap: 20px;
+    // row-gap: 0px;
+    // column-gap: 20px;
+    padding-bottom: 20px;
   }
 
   @media screen and (min-width: $desktop) {
-    column-gap: 24px;
+    // column-gap: 24px;
+    padding-bottom: 40px;
+  }
+}
+
+.roomsQuantity{
+  margin-bottom: 12px;
+  font-size: 24px;
+  line-height: 1.4;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 16px;
+      font-size: 36px;
+      line-height: 1.3;
   }
 }
 
 .sliderWrapper {
+  margin-bottom: 12px;
 
   @media screen and (min-width: $tablet) {
     max-height: 505px;
+    margin-bottom: 16px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -62,47 +91,71 @@
   }
 }
 
-.content {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
+// .content {
+//   width: 100%;
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -webkit-box-orient: vertical;
+//   -webkit-box-direction: normal;
+//   -ms-flex-direction: column;
+//   flex-direction: column;
+
+//   @media screen and (orientation: "landscape") {
+//     flex: 1;
+//   }
+
+//   @media screen and (min-width: $tablet) {
+//     -webkit-box-align: start;
+//     -ms-flex-align: start;
+//     align-items: flex-start;
+//   }
+
+//   @media screen and (min-width: $desktop) {
+//     -webkit-box-align: start;
+//     -ms-flex-align: start;
+//     align-items: flex-start;
+//   }
+// }
+
+.addressBlock{
+  display:flex;
   flex-direction: column;
-
-  @media screen and (orientation: "landscape") {
-    flex: 1;
-  }
-
-  @media screen and (min-width: $tablet) {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-  }
-
-  @media screen and (min-width: $desktop) {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-  }
-}
-
-.quantityRoomsInfo {
+  row-gap: 2px;
+  font-family: GothamProBold, sans-serif;
   line-height: 1.6;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 
   @media screen and (min-width: $tablet) {
-    font-size: 18px;
+    flex-direction: row;
+    margin-bottom: 16px;
+    font-family: GothamPro, sans-serif;
+    font-size: 20px;
     line-height: 1.4;
+    row-gap: 0;
+    column-gap: 40px;
   }
 
-  @media screen and (min-width: $desktop) {
-    font-size: 26px;
-    margin-bottom: 12px;
-  }
+    @media screen and (min-width: $desktop) {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
 }
+
+// .quantityRoomsInfo {
+//   line-height: 1.6;
+//   margin-bottom: 8px;
+
+//   @media screen and (min-width: $tablet) {
+//     font-size: 18px;
+//     line-height: 1.4;
+//   }
+
+//   @media screen and (min-width: $desktop) {
+//     font-size: 26px;
+//     margin-bottom: 12px;
+//   }
+// }
 
 .address {
   margin-bottom: 12px;
@@ -119,40 +172,73 @@
 .locationLink {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.6;
+  column-gap: 4px;
+  // font-style: normal;
+  // font-weight: 700;
+  // line-height: 1.6;
 
   @media screen and (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 1.4;
+      column-gap: 12px;
+    // font-size: 20px;
+    // line-height: 1.4;
   }
 
   @media screen and (min-width: $desktop) {
-    gap: 12px;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 1.3;
+    // font-weight: 400;
+    // font-size: 32px;
+    // line-height: 1.3;
   }
 }
 
 .icon {
   width: 24px;
   height: 24px;
-  stroke: $Primary900;
-  fill: $Primary900;
+  stroke: $Secondary-800;
+  fill: $Secondary-800;
 }
 
-.amenitiesWrapper {
-  margin-bottom: 16px;
+.bedsProposition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2px;
+  // font-weight: 700;
+  // line-height: 1.6;
+
 
   @media screen and (min-width: $tablet) {
-    margin-bottom: 20px;
   }
 
   @media screen and (min-width: $desktop) {
-    margin-bottom: 40px;
+    // font-size: 20px;
+    // line-height: 1.7;
+  }
+}
+
+.imgSvgContainer {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.imgSvg {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.amenitiesWrapper {
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 24px;
   }
 }
 
@@ -205,6 +291,10 @@
 
 .orderBtn {
   width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 740px;;
+  }
 }
 
 .textGrid {

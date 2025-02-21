@@ -1,16 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
-import { amenitiesData, bedsData, currentLanguages } from '@/data';
+import { amenitiesData, currentLanguages } from '@/data';
 import styles from './Amenities.module.scss';
 
 
 const Amenities = ({ dataId, customClass }) => {
-  const { t, i18n } = useTranslation();
-
-  let bed;
-  if (dataId) {
-    bed = bedsData.find(item => item.quantity === dataId?.bedsQuantity);
-  }
+  const { t, i18n } = useTranslation();  
 
   const matchingAmenities = amenitiesData.filter((amenity) =>
     dataId.amenities.includes(amenity.titleUa)
@@ -18,10 +13,7 @@ const Amenities = ({ dataId, customClass }) => {
 
 
   return (
-    <article className={`${styles.propositionContainer} ${customClass}`}>
-      <h5 className={styles.propositionTitle}>
-        {t('ApartmentsPage.TextOfDescOptions')} ?
-      </h5>
+    <article className={`${styles.propositionContainer} ${customClass}`}>    
       <ul className={styles.propositionList}>
         {matchingAmenities.map((amenity) => (
           <li key={amenity.id} className={styles.propositionItem}>
@@ -39,22 +31,6 @@ const Amenities = ({ dataId, customClass }) => {
           </li>
         ))}
       </ul>
-
-      <div className={styles.bedsProposition}>
-        <figure
-          className={styles.imgSvgContainer}
-        >
-          <Image
-            src={bed?.img}
-            alt={
-              ((i18n.language === currentLanguages.EN) && bed?.titleEn) || ((i18n.language === currentLanguages.RU) && bed?.titleRu) || bed?.titleUa}
-            fill={true}
-            className={styles.imgSvg}
-            sizes="24px"
-          />
-        </figure>
-        <figcaption>{((i18n.language === currentLanguages.EN) && bed?.titleEn) || ((i18n.language === currentLanguages.RU) && bed?.titleRu) || bed?.titleUa}</figcaption>
-      </div>
     </article>
   );
 };

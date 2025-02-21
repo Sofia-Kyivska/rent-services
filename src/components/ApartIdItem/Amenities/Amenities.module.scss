@@ -2,44 +2,25 @@
 
 .propositionContainer {
   width: 100%;
-}
-
-.propositionTitle {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.4;
-  margin-bottom: 12px;
-
-  @media screen and (min-width: $tablet) {
-    font-size: 22px;
-    margin-bottom: 16px;
-  }
 
   @media screen and (min-width: $desktop) {
-    font-size: 32px;
-    line-height: 1.3;
-    margin-bottom: 24px;
+    width: 740px;
   }
 }
 
 .propositionList {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 12px;
-  grid-column-gap: 12px;
-  margin-bottom: 12px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 20px;
 
   @media screen and (min-width: $tablet) {
-    grid-row-gap: 16px;
-    grid-column-gap: 12px;
-    margin-bottom: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 56px;
   }
 
   @media screen and (min-width: $desktop) {
-    grid-row-gap: 20px;
     grid-column-gap: 24px;
-    margin-bottom: 20px;
   }
 }
 
@@ -50,11 +31,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  column-gap: 4px;
+  column-gap: 24px;
   line-height: 1.6;
 
   @media screen and (min-width: $desktop) {
-    column-gap: 24px;
     font-size: 20px;
     line-height: 1.7;
   }
@@ -69,28 +49,4 @@
 .imgSvg {
   -o-object-fit: cover;
   object-fit: cover;
-}
-
-.bedsProposition {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  justify-content: center;
-  column-gap: 4px;
-  font-weight: 700;
-  line-height: 1.6;
-
-
-  @media screen and (min-width: $tablet) {
-    column-gap: 12px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    column-gap: 24px;
-    font-size: 20px;
-    line-height: 1.7;
-  }
 }

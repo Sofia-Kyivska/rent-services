@@ -22,8 +22,7 @@
     "OneAndThreeRoom": "One-room and three-room",
     "TwoAndThreeRoom": "Two-room and three-room",
     "NotFound": "apartments not found",
-    "TextOfDescAdress": "-bedroom",
-    "TextOfDescOptions": "What will be in the apartment",
+    "TextOfDescAdress": "-bedroom TRANSLATE",
     "PricePeriod": "day"
   },
   "ApartIdItem": {

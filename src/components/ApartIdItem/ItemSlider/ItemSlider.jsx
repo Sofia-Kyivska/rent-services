@@ -1,9 +1,9 @@
 "use client";
-
 import React, { useState, useEffect, useMemo } from "react";
-import styles from "./ItemSlider.module.scss";
 import { v4 } from "uuid";
 import { CldImage } from "next-cloudinary";
+import styles from "./ItemSlider.module.scss";
+
 import seoStyles from "@/app/seoStyles.module.css";
 
 // Import Swiper React components
@@ -12,7 +12,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
   Pagination,
-  Mousewheel,
   Keyboard,
   Thumbs,
   FreeMode,
@@ -23,12 +22,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./ItemSliderTop.css";
-import "./ItemSliderBottom.css";
 
 
 const ItemSlider = ({ dataId, customClass }) => {
   const [item, setItem] = useState([]);
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const images = dataId?.imgs;
 
@@ -80,37 +77,8 @@ const ItemSlider = ({ dataId, customClass }) => {
         keyboard={{
           enabled: true,
         }}
-        thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Pagination, Thumbs, Keyboard]}
         className="ItemSliderTop"
-      >
-        {item}
-      </Swiper>
-
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        spaceBetween={12}
-        slidesPerView={3}
-        mousewheel={true}
-        loop={true}
-        freeMode={true}
-        watchSlidesProgress={true}
-        keyboard={{
-          enabled: true,
-        }}
-        breakpoints={{
-          360: {
-            spaceBetween: 12,
-          },
-          768: {
-            spaceBetween: 20,
-          },
-          1366: {
-            spaceBetween: 24,
-          },
-        }}
-        modules={[FreeMode, Navigation, Thumbs, Keyboard, Mousewheel]}
-        className="ItemSliderBottom"
       >
         {item}
       </Swiper>
