@@ -98,7 +98,7 @@ const ApartIdItem = ({ params }) => {
                                 <figcaption>{dataId?.bedsQuantity}</figcaption>
                                 <figure className={styles.imgSvgContainer}>
                                     <Image
-                                        src={bed?.img}
+                                        src="/webp/Person.webp"
                                         alt={((i18n.language === currentLanguages.EN) && "Sleeping place") || ((i18n.language === currentLanguages.RU) && "Спальное место") || "Спальне місце"}
                                         fill={true}
                                         className={styles.imgSvg}
