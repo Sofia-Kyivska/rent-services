@@ -48,13 +48,13 @@ margin-bottom: 8px;
   }
 
   @media screen and (min-width: $tablet) {
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+    // -webkit-box-pack: space-evenly;
+    // -ms-flex-pack: space-evenly;
+    // justify-content: space-evenly;
+    // -webkit-box-orient: horizontal;
+    // -webkit-box-direction: normal;
+    // -ms-flex-direction: row-reverse;
+    // flex-direction: row-reverse;
     // row-gap: 0px;
     // column-gap: 20px;
     padding-bottom: 20px;
@@ -132,7 +132,6 @@ margin-bottom: 8px;
   @media screen and (min-width: $tablet) {
     flex-direction: row;
     margin-bottom: 16px;
-    font-family: GothamPro, sans-serif;
     font-size: 20px;
     line-height: 1.4;
     row-gap: 0;
@@ -161,14 +160,14 @@ margin-bottom: 8px;
 // }
 
 .address {
-  margin-bottom: 12px;
+  // margin-bottom: 12px;
 
   @media screen and (min-width: $tablet) {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
   }
 
   @media screen and (min-width: $desktop) {
-    margin-bottom: 32px;
+    // margin-bottom: 32px;
   }
 }
 
