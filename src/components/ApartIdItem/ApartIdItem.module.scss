@@ -67,6 +67,7 @@ margin-bottom: 8px;
 }
 
 .roomsQuantity{
+  margin-right: auto;
   margin-bottom: 12px;
   font-size: 24px;
   line-height: 1.4;
@@ -121,8 +122,10 @@ margin-bottom: 8px;
 .addressBlock{
   display:flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 2px;
   font-family: GothamProBold, sans-serif;
+  font-weight: 700;
   line-height: 1.6;
   margin-bottom: 12px;
 
@@ -173,7 +176,7 @@ margin-bottom: 8px;
   display: flex;
   align-items: center;
   column-gap: 4px;
-  // font-style: normal;
+  font-style: normal;
   // font-weight: 700;
   // line-height: 1.6;
 
@@ -293,7 +296,7 @@ margin-bottom: 8px;
   width: 100%;
 
   @media screen and (min-width: $tablet) {
-    max-width: 740px;;
+    max-width: 740px;
   }
 }
 
