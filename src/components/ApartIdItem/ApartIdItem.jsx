@@ -12,7 +12,7 @@ import ItemSlider from "./ItemSlider/ItemSlider";
 import IsLoading from "../share/IsLoading/IsLoading";
 import { GetDataById } from "@/fetch/clientFetch";
 import { changeDescsFromStringToArray } from "@/utils/changeDescsFromStringToArray";
-import { bedsData, currentLanguages, textInfoAppartId } from "@/data";
+import { currentLanguages, textInfoAppartId } from "@/data";
 import seoStyles from "@/app/seoStyles.module.css";
 import styles from "./ApartIdItem.module.scss";
 
@@ -27,11 +27,6 @@ const ApartIdItem = ({ params }) => {
 
     // общий массив для рендера, созданный путем распыления массивов данных из локальной data и БД
     const allInformation = [...allLangsOfDescsArray, ...textInfoAppartId];
-
-    let bed;
-      if (dataId) {
-        bed = bedsData.find(item => item.quantity === dataId?.bedsQuantity);
-      }
 
     const { t, i18n } = useTranslation();
 
@@ -100,17 +95,18 @@ const ApartIdItem = ({ params }) => {
                             </address>
 
                             <div className={styles.bedsProposition}>
+                                <figcaption>{dataId?.bedsQuantity}</figcaption>
                                 <figure className={styles.imgSvgContainer}>
                                     <Image
                                         src={bed?.img}
-                                        alt={((i18n.language === currentLanguages.EN) && bed?.titleEn) || ((i18n.language === currentLanguages.RU) && bed?.titleRu) || bed?.titleUa}
+                                        alt={((i18n.language === currentLanguages.EN) && "Sleeping place") || ((i18n.language === currentLanguages.RU) && "Спальное место") || "Спальне місце"}
                                         fill={true}
                                         className={styles.imgSvg}
-                                            sizes="24px"
+                                        sizes="24px"
                                             
                                     />
                                 </figure>
-                                    <figcaption>{((i18n.language === currentLanguages.EN) && bed?.titleEn) || ((i18n.language === currentLanguages.RU) && bed?.titleRu) || bed?.titleUa}</figcaption>
+                                    
                             </div>                                 
                         </div>
                             
