@@ -1,7 +1,8 @@
 .ItemSliderTop {
   width: 100%;
-  margin-bottom: 12px;
-  height: 66.6vw;
+  /* margin-bottom: 12px; */
+  /* height: 66.6vw; */
+  aspect-ratio: 296 / 164;
 }
 
 .ItemSliderTop .swiper-slide {
@@ -70,8 +71,9 @@
 
 @media screen and (min-width: 768px) {
   .ItemSliderTop {
-    height: 35.8vw;
-    margin-bottom: 20px;
+    /* height: 35.8vw;
+    margin-bottom: 20px; */
+    aspect-ratio: 688 / 382;
   }
 
   .ItemSliderTop .swiper-pagination {
@@ -87,9 +89,10 @@
 
 @media screen and (min-width: 1366px) {
   .ItemSliderTop {
-    height: 32.8vw;
+        aspect-ratio: 1222 / 680;
+    /* height: 32.8vw; */
     max-height: 630px;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
   }
 
   .ItemSliderTop .swiper-button-prev,
