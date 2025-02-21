@@ -7,7 +7,7 @@
   gap: 10px;
 
   @media screen and (min-width: $tablet) {
-    gap: 12px;
+    gap: 16px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -22,7 +22,7 @@
   align-items: center;
   column-gap: 8px;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desktop) {
     column-gap: 12px;
   }
 }
@@ -38,8 +38,18 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+
+  & svg {
+    width: 18px;
+    height: 18px;
+    fill: transparent;
+    stroke: $Secondary-800;
+    z-index: 1;
+    @media screen and (min-width: $desktop) {
+      width: 23px;
+      height: 23px;
+    }
+  }
 
   &::before {
     content: '';
@@ -70,15 +80,6 @@
   &:hover::before {
     box-shadow: none;
   }
-
-  & img {
-    object-fit: contain;
-  }
-
-  @media screen and (min-width: $mobile) {
-    width: 18px;
-    height: 18px;
-  }
 }
 
 .phone {
@@ -87,15 +88,16 @@
   @media screen and (min-width: $tablet) {
     display: block;
     font-family: inherit;
-    font-weight: 400;
+
+    font-family: GothamProBold, sans-serif;
+    font-weight: 700;
     font-size: 16px;
     line-height: 1.6;
-    color: $Gray-900;
+    color: $Secondary-800;
   }
 
   @media screen and (min-width: $desktop) {
     font-size: 20px;
     line-height: 1.7;
-    margin-right: 12px;
   }
 }
