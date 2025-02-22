@@ -2,7 +2,6 @@
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-// import { v4 } from "uuid";
 import ModalR from "@/components/Modal/Modal";
 import OrderForm from "@/components/OrderForm/OrderForm";
 import BreadCrumbs from "../BreadCrumbs/BreadCrumbs";
@@ -124,8 +123,8 @@ const ApartIdItem = ({ params }) => {
                         {!isLoading &&
                             allInformation.map((el, index) => {
                                 return (
-                                    <li key={index}>
-                                        {el.title && (
+                                    <li key={index} className={styles.textInfoBlock}>
+                                        {el.titleUa && (
                                             <h5
                                                 className={styles.textInfoTitle}
                                             >
@@ -139,7 +138,7 @@ const ApartIdItem = ({ params }) => {
                                             </h5>
                                         )}
 
-                                        {el.title === "Правила:" ? (
+                                        {el.titleUa === "Правила:" ? (
                                             <ul className={styles.rulesList}>
                                                 {el.rulesList.map(
                                                     (el, index) => {

@@ -301,6 +301,14 @@ margin-bottom: 8px;
 
 .textGrid {
   width: 100%;
+  padding-top: 16px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 20px;
+  }
+    @media screen and (min-width: $desktop) {
+      padding-top: 40px;
+    }
 }
 
 .textInfoContainer {
@@ -314,13 +322,26 @@ margin-bottom: 8px;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  row-gap: 8px;
+  row-gap: 12px;
+  color: $Gray-0;
 
   @media screen and (min-width: $desktop) {
-    row-gap: 12px;
+    row-gap: 24px;
     font-size: 20px;
     line-height: 1.7;
   }
+}
+
+.textInfoBlock{
+padding: 4px;
+border-radius: 12px;
+background-color: $Primary-800;
+
+@media screen and (min-width: $tablet) {
+  padding: 12px;
+}
+
+@media screen and (min-width: $desktop) {}
 }
 
 .textInfoTitle {
