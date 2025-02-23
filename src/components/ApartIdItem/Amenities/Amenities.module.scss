@@ -3,8 +3,8 @@
 .propositionContainer {
   width: 100%;
 
-  @media screen and (min-width: $desktop) {
-    width: 740px;
+  @media screen and (min-width: $tablet) {
+    max-width: 740px;
   }
 }
 

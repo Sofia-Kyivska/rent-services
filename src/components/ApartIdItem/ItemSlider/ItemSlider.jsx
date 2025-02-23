@@ -39,10 +39,7 @@ const ItemSlider = ({ dataId, customClass }) => {
       allImages.map((el, i) => {
         const imgLoading = i === 0 ? "eager" : "lazy";
         const imgPriority = i === 0 ? true : false;
-        const imgSizes =
-          i === 0
-            ? "(max-width: 767px) 100vw, (max-width: 1440px) 50vw, 33vw"
-            : "(max-width: 767px) 33vw,  17vw";
+       
         return (
           <SwiperSlide key={v4()}>
             <CldImage
@@ -50,9 +47,10 @@ const ItemSlider = ({ dataId, customClass }) => {
               alt="Flat image"
               fill={true}
               loading={imgLoading}
-              sizes={imgSizes}
+              sizes="(max-width: 1365px) 90vw, 1222px"
               priority={imgPriority}
             />
+            <p className="price">{dataId.price} ₴</p>
           </SwiperSlide>
         );
       })

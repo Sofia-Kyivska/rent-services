@@ -4,27 +4,18 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  // row-gap: 16px;
-
-  @media screen and (min-width: $tablet) {
-    // row-gap: 20px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    // row-gap: 24px;
-  }
+  flex-direction: column; 
 }
 
 .crumbs{
-margin-bottom: 12px;
+  margin-bottom: 12px;
 
   @media screen and (min-width: $tablet) {
-  margin-bottom: 16px;
+    margin-bottom: 16px;
   }
 
   @media screen and (min-width: $desktop) {
-margin-bottom: 8px;
+    margin-bottom: 8px;
   }
 }
 
@@ -40,28 +31,13 @@ margin-bottom: 8px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  // row-gap: 16px;
   padding-bottom: 16px;
-
-  @media screen and (orientation: landscape) and (max-width: 767px) {
-    // gap: 12px;
-  }
-
-  @media screen and (min-width: $tablet) {
-    // -webkit-box-pack: space-evenly;
-    // -ms-flex-pack: space-evenly;
-    // justify-content: space-evenly;
-    // -webkit-box-orient: horizontal;
-    // -webkit-box-direction: normal;
-    // -ms-flex-direction: row-reverse;
-    // flex-direction: row-reverse;
-    // row-gap: 0px;
-    // column-gap: 20px;
+ 
+  @media screen and (min-width: $tablet) {   
     padding-bottom: 20px;
   }
 
   @media screen and (min-width: $desktop) {
-    // column-gap: 24px;
     padding-bottom: 40px;
   }
 }
@@ -74,8 +50,8 @@ margin-bottom: 8px;
 
   @media screen and (min-width: $desktop) {
     margin-bottom: 16px;
-      font-size: 36px;
-      line-height: 1.3;
+    font-size: 36px;
+    line-height: 1.3;
   }
 }
 
@@ -91,33 +67,6 @@ margin-bottom: 8px;
     max-height: 696px;
   }
 }
-
-// .content {
-//   width: 100%;
-//   display: -webkit-box;
-//   display: -ms-flexbox;
-//   display: flex;
-//   -webkit-box-orient: vertical;
-//   -webkit-box-direction: normal;
-//   -ms-flex-direction: column;
-//   flex-direction: column;
-
-//   @media screen and (orientation: "landscape") {
-//     flex: 1;
-//   }
-
-//   @media screen and (min-width: $tablet) {
-//     -webkit-box-align: start;
-//     -ms-flex-align: start;
-//     align-items: flex-start;
-//   }
-
-//   @media screen and (min-width: $desktop) {
-//     -webkit-box-align: start;
-//     -ms-flex-align: start;
-//     align-items: flex-start;
-//   }
-// }
 
 .addressBlock{
   display:flex;
@@ -138,36 +87,9 @@ margin-bottom: 8px;
     column-gap: 40px;
   }
 
-    @media screen and (min-width: $desktop) {
-      font-size: 26px;
-      margin-bottom: 20px;
-    }
-}
-
-// .quantityRoomsInfo {
-//   line-height: 1.6;
-//   margin-bottom: 8px;
-
-//   @media screen and (min-width: $tablet) {
-//     font-size: 18px;
-//     line-height: 1.4;
-//   }
-
-//   @media screen and (min-width: $desktop) {
-//     font-size: 26px;
-//     margin-bottom: 12px;
-//   }
-// }
-
-.address {
-  // margin-bottom: 12px;
-
-  @media screen and (min-width: $tablet) {
-    // margin-bottom: 20px;
-  }
-
   @media screen and (min-width: $desktop) {
-    // margin-bottom: 32px;
+    font-size: 26px;
+    margin-bottom: 20px;
   }
 }
 
@@ -175,20 +97,10 @@ margin-bottom: 8px;
   display: flex;
   align-items: center;
   column-gap: 4px;
-  font-style: normal;
-  // font-weight: 700;
-  // line-height: 1.6;
+  font-style: normal; 
 
   @media screen and (min-width: $tablet) {
-      column-gap: 12px;
-    // font-size: 20px;
-    // line-height: 1.4;
-  }
-
-  @media screen and (min-width: $desktop) {
-    // font-weight: 400;
-    // font-size: 32px;
-    // line-height: 1.3;
+    column-gap: 12px;    
   }
 }
 
@@ -208,17 +120,6 @@ margin-bottom: 8px;
   align-items: center;
   justify-content: center;
   column-gap: 2px;
-  // font-weight: 700;
-  // line-height: 1.6;
-
-
-  @media screen and (min-width: $tablet) {
-  }
-
-  @media screen and (min-width: $desktop) {
-    // font-size: 20px;
-    // line-height: 1.7;
-  }
 }
 
 .imgSvgContainer {
@@ -306,9 +207,10 @@ margin-bottom: 8px;
   @media screen and (min-width: $tablet) {
     padding-top: 20px;
   }
-    @media screen and (min-width: $desktop) {
-      padding-top: 40px;
-    }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 40px;
+  }
 }
 
 .textInfoContainer {
@@ -333,15 +235,13 @@ margin-bottom: 8px;
 }
 
 .textInfoBlock{
-padding: 4px;
-border-radius: 12px;
-background-color: $Primary-800;
+  padding: 4px;
+  border-radius: 12px;
+  background-color: $Primary-800;
 
-@media screen and (min-width: $tablet) {
-  padding: 12px;
-}
-
-@media screen and (min-width: $desktop) {}
+  @media screen and (min-width: $tablet) {
+    padding: 12px;
+  }
 }
 
 .textInfoTitle {
