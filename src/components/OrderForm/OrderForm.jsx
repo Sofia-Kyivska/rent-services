@@ -23,7 +23,6 @@ import styles from "./OrderForm.module.scss";
 import seoStyles from "@/app/seoStyles.module.css";
 import "react-datepicker/dist/react-datepicker.css";
 
-
 const OrderForm = ({ id = "" }) => {
     const { t, i18n } = useTranslation();
     const schema = useMemo(() => orderSchema(), []);
@@ -54,7 +53,6 @@ const OrderForm = ({ id = "" }) => {
             }, 300);
         }, 2000);
     };
-
 
     return (
         <Formik
@@ -133,13 +131,14 @@ const OrderForm = ({ id = "" }) => {
                                             placeholder={t("Form.name")}
                                             autoComplete='off'
                                             maxLength='30'
-                                            className={`${styles.input} ${errors.userName
+                                            className={`${styles.input} ${
+                                                errors.userName
                                                     ? styles.inputError
                                                     : touched.userName &&
-                                                        values.userName
-                                                        ? styles.inputSuccess
-                                                        : ""
-                                                }`}
+                                                      values.userName
+                                                    ? styles.inputSuccess
+                                                    : ""
+                                            }`}
                                         />
                                         <ErrorMessage
                                             name='userName'
@@ -155,22 +154,22 @@ const OrderForm = ({ id = "" }) => {
                                             const icon =
                                                 (errors.phone &&
                                                     touched.phone) ||
-                                                    (errors.phone && !isValid)
+                                                (errors.phone && !isValid)
                                                     ? "/sprite.svg#exclamation-mark"
                                                     : !errors.phone &&
-                                                        values.phone
-                                                        ? "/sprite.svg#success"
-                                                        : "/sprite.svg#snowflake";
+                                                      values.phone
+                                                    ? "/sprite.svg#success"
+                                                    : "/sprite.svg#snowflake";
 
                                             const iconClass =
                                                 (errors.phone &&
                                                     touched.phone) ||
-                                                    (errors.phone && !isValid)
+                                                (errors.phone && !isValid)
                                                     ? styles.iconStatus
                                                     : !errors.phone &&
-                                                        values.phone
-                                                        ? styles.iconStatus
-                                                        : styles.iconImportant;
+                                                      values.phone
+                                                    ? styles.iconStatus
+                                                    : styles.iconImportant;
 
                                             return (
                                                 <svg className={iconClass}>
@@ -191,16 +190,17 @@ const OrderForm = ({ id = "" }) => {
                                             placeholder={t("Form.phone")}
                                             autoComplete='off'
                                             maxLength='14'
-                                            className={`${styles.input} ${errors.phone && touched.phone
+                                            className={`${styles.input} ${
+                                                errors.phone && touched.phone
                                                     ? styles.inputError
                                                     : touched.phone
-                                                        ? styles.inputSuccess
-                                                        : ""
-                                                }`}
+                                                    ? styles.inputSuccess
+                                                    : ""
+                                            }`}
                                         />
 
                                         {(errors.phone && touched.phone) ||
-                                            (errors.phone && !isValid) ? (
+                                        (errors.phone && !isValid) ? (
                                             <p className={styles.error}>
                                                 {errors.phone}
                                             </p>
@@ -246,15 +246,17 @@ const OrderForm = ({ id = "" }) => {
                                                         dateFormat='dd/MM/yyyy'
                                                         locale={locale}
                                                         selectsStart
-                                                        className={`${styles.input
-                                                            } ${errors.checkIn &&
-                                                                touched.checkIn
+                                                        className={`${
+                                                            styles.input
+                                                        } ${
+                                                            errors.checkIn &&
+                                                            touched.checkIn
                                                                 ? styles.inputError
                                                                 : touched.checkIn &&
-                                                                    values.checkIn
-                                                                    ? styles.inputSuccess
-                                                                    : ""
-                                                            }`}
+                                                                  values.checkIn
+                                                                ? styles.inputSuccess
+                                                                : ""
+                                                        }`}
                                                         placeholderText={t(
                                                             "Form.plcHolderDateOfEntry"
                                                         )}
@@ -353,15 +355,17 @@ const OrderForm = ({ id = "" }) => {
                                                         }
                                                         selectsEnd
                                                         minDate={values.checkIn}
-                                                        className={`${styles.input
-                                                            } ${errors.checkOut &&
-                                                                touched.checkOut
+                                                        className={`${
+                                                            styles.input
+                                                        } ${
+                                                            errors.checkOut &&
+                                                            touched.checkOut
                                                                 ? styles.inputError
                                                                 : touched.checkOut &&
-                                                                    values.checkOut
-                                                                    ? styles.inputSuccess
-                                                                    : ""
-                                                            }`}
+                                                                  values.checkOut
+                                                                ? styles.inputSuccess
+                                                                : ""
+                                                        }`}
                                                         placeholderText={t(
                                                             "Form.plcHolderDepartureDate"
                                                         )}
@@ -435,13 +439,14 @@ const OrderForm = ({ id = "" }) => {
                                             placeholder={t(
                                                 "Form.plcHolderNumberOfObject"
                                             )}
-                                            className={`${styles.input} ${errors.objNumber
+                                            className={`${styles.input} ${
+                                                errors.objNumber
                                                     ? styles.inputError
                                                     : touched.objNumber &&
-                                                        values.objNumber
-                                                        ? styles.inputSuccess
-                                                        : ""
-                                                }`}
+                                                      values.objNumber
+                                                    ? styles.inputSuccess
+                                                    : ""
+                                            }`}
                                         />
                                         <ErrorMessage
                                             name='objNumber'
@@ -479,6 +484,5 @@ const OrderForm = ({ id = "" }) => {
         </Formik>
     );
 };
-
 
 export default OrderForm;
