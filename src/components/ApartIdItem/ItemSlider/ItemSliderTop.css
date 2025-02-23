@@ -1,7 +1,5 @@
 .ItemSliderTop {
   width: 100%;
-  /* margin-bottom: 12px; */
-  /* height: 66.6vw; */
   aspect-ratio: 296 / 164;
 }
 
@@ -20,6 +18,18 @@
   -ms-transform: none;
   -o-transform: translate3d(0, 0, 0);
   transform: none;
+}
+
+.ItemSliderTop .swiper-slide .price {
+  position:absolute;
+  left:2px;
+  bottom:2px;
+  padding: 4px 8px;
+  border-radius:12px;
+  background-color:#ffffff;
+  font-family:GothamProBold, sans-serif;
+  font-weight:700;
+  line-height:1.6;
 }
 
 .ItemSliderTop .swiper-button-prev,
@@ -71,9 +81,15 @@
 
 @media screen and (min-width: 768px) {
   .ItemSliderTop {
-    /* height: 35.8vw;
-    margin-bottom: 20px; */
-    aspect-ratio: 688 / 382;
+      aspect-ratio: 688 / 382;
+  }
+
+  .ItemSliderTop .swiper-slide .price {
+    left:12px;
+    bottom:12px;
+    padding: 12px 20px;
+    font-size:20px;
+    line-height:1.4;
   }
 
   .ItemSliderTop .swiper-pagination {
@@ -89,10 +105,14 @@
 
 @media screen and (min-width: 1366px) {
   .ItemSliderTop {
-        aspect-ratio: 1222 / 680;
-    /* height: 32.8vw; */
+    aspect-ratio: 1222 / 680;
     max-height: 630px;
-    /* margin-bottom: 16px; */
+  }
+
+  .ItemSliderTop .swiper-slide .price {
+    left:16px;
+    bottom:16px;
+    font-size:26px;
   }
 
   .ItemSliderTop .swiper-button-prev,
