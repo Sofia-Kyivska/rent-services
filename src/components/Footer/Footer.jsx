@@ -59,7 +59,11 @@ const Footer = ({ onClick }) => {
                 {isMobile && (
                     <div className={styles.mobileContentWrapper}>
                         <div className='footer-logo-wrapper'>
-                            <Logo className={`${styles.footerLogo}`} />
+                            <Logo 
+                            className={`${styles.footerLogo}`}
+                            logoSmall="icon-logoBlackSmall"
+                            logoBig="icon-logoBlackBig"
+                            />
                         </div>
 
                         {!isLoading && (
@@ -74,7 +78,10 @@ const Footer = ({ onClick }) => {
                 {!isMobile && (
                     <div className={styles.contentWrapper}>
                         <div className='footer-logo-wrapper'>
-                            <Logo className={`${styles.footerLogo}`} />
+                            <Logo className={`${styles.footerLogo}`}
+                            logoSmall="icon-logoBlackSmall"
+                            logoBig="icon-logoBlackBig"
+                            />
                         </div>
 
                         <SocialLinksFooter />
