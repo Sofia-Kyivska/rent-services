@@ -75,9 +75,13 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
-  color: $Secondary-800;
   cursor: pointer;
-
+  color: $Secondary-800;
+  &:hover,
+  &:focus {
+    color: $Gray-0;
+    text-shadow: 1px 1px 4px $Primary-900;
+  }
   @media screen and (min-width: $desktop) {
     font-size: 20px;
     line-height: 1.7;

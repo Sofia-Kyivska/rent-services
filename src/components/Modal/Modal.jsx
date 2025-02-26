@@ -4,17 +4,15 @@ import { SiteContext } from "@/context/SiteContext";
 import Modal from "react-modal";
 import "./Modal.css";
 
-
 const ModalR = ({ children }) => {
     const { isModalOpen, closeModal } = useContext(SiteContext);
-
 
     return (
         <Modal
             isOpen={isModalOpen}
             overlayClassName={"backdrop"}
             className={"modalContent"}
-            closeTimeoutMS={700}
+            closeTimeoutMS={400}
             onRequestClose={closeModal}
             ariaHideApp={false}
         >
@@ -22,6 +20,5 @@ const ModalR = ({ children }) => {
         </Modal>
     );
 };
-
 
 export default ModalR;
