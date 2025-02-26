@@ -58,7 +58,7 @@ const ApartIdItem = ({ params }) => {
                             Detailed information about the apartments
                             </h3>
 
-                            <p className={styles.roomsQuantity}>{dataId.roomsQuantity}{t("ApartmentsPage.TextOfDescAdress")}</p>
+                            <p className={styles.roomsQuantity}>{dataId.roomsQuantity}{t("ApartIdItem.RoomsQuantityTitle")}</p>
                             
                         <ItemSlider
                             dataId={dataId}

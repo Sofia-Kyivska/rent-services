@@ -22,7 +22,7 @@
     "OneAndThreeRoom": "Однокімнатні та трикімнатні",
     "TwoAndThreeRoom": "Двокімнатні та трикімнатні",
     "NotFound": "Квартири не знайдено",
-    "TextOfDescAdress": "-кімнатні апартаменти",
+    "TextOfDescAdress": "-кім. кв.",
     "PricePeriod": "доба"
   },
   "ApartIdItem": {
@@ -31,6 +31,7 @@
     "SeoTitleH3": "Детальна інформація про апартаменти",
     "SeoTitleH4": "Детальна інформація про зручності",
     "SeoTitleItemSliderH4": "Детальні зображення квартири",
+    "RoomsQuantityTitle": "-кімнатні апартаменти",
     "TextWelcome": "Ласкаво просимо до SofiaRent."
   },
   "RulesPage": {

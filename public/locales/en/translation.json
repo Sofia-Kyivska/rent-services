@@ -22,7 +22,7 @@
     "OneAndThreeRoom": "One-room and three-room",
     "TwoAndThreeRoom": "Two-room and three-room",
     "NotFound": "apartments not found",
-    "TextOfDescAdress": "-bedroom TRANSLATE",
+    "TextOfDescAdress": "-bedroom",
     "PricePeriod": "day"
   },
   "ApartIdItem": {
@@ -31,6 +31,7 @@
     "SeoTitleH3": "Detailed information about the apartments",
     "SeoTitleH4": "Detailed information about the amenities",
     "SeoTitleItemSliderH4": "Detailed images of the apartment",
+    "RoomsQuantityTitle": "-room apartment",
     "TextWelcome": "Welcome to SofiaRent."
   },
   "RulesPage": {
