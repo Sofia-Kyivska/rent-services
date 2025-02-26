@@ -15,7 +15,7 @@ const Logo = ({ className, logoBig, logoSmall }) => {
       <svg>
         <use
           href={
-            !isDesktop ? `sprite.svg#${logoSmall}` : `sprite.svg#${logoBig}`
+            !isDesktop ? `/sprite.svg#${logoSmall}` : `/sprite.svg#${logoBig}`
           }
         />
       </svg>

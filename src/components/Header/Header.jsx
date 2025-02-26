@@ -118,9 +118,9 @@ const Header = () => {
 
   return (
     <header id="header" className={styles.container}>
-      <h3 className={styles.promotion}>
+      <div className={styles.promotion}>
         {!isLoading && <p>{t('Header.headerSale')}</p>}
-      </h3>
+      </div>
       <div className={styles.navBarContainer}>
         <div className={`${styles.navBar} container`}>
           <Logo
