@@ -68,23 +68,22 @@
 .registerBtn {
   padding: 20px;
   background-color: $Primary800;
-  color: $Primary600;
+  color: $Gray-0;
   font-size: 20px;
   border-radius: 5px;
   border: none;
-  // font-family:var(--font--lato);
-  font-weight: bold;
+  font-family: GothamProBold, sans-serif;
+  font-weight: 700;
   cursor: not-allowed;
 }
 
 .active {
+  background-color: $Primary-600;
   cursor: pointer;
-  background-color: $dashboardBtnBgColor;
-  color: $Primary900;
 }
 
 .active.registerBtn:hover {
-  background-color: $dashboardHoverBtnBgColor;
+  background-color: $Primary-800;
 }
 
 .error {

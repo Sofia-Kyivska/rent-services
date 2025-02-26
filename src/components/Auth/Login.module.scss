@@ -68,29 +68,28 @@
 .loginBtn {
   padding: 20px;
   background-color: $Primary800;
-  color: $Primary600;
+  color: $Gray-0;
   font-size: 20px;
   border-radius: 5px;
   border: none;
-  // font-family:var(--font--lato);
-  font-weight: bold;
+  font-family: GothamProBold, sans-serif;
+  font-weight: 700;
   cursor: not-allowed;
 }
 
 .active {
+  background-color: $Primary-600;
   cursor: pointer;
-  background-color: $dashboardBtnBgColor;
-  color: $Primary900;
 }
 
 .active.loginBtn:hover {
-  background-color: $dashboardHoverBtnBgColor;
+  background-color: $Primary-800;
 }
 
 .loginGoogleBtn {
   width:360px;
   padding: 5px;
-  // font-family:var(--font--lato);
+  font-family: GothamPro, sans-serif;
   font-size:20px;
   cursor: pointer;
 }
