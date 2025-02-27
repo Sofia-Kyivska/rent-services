@@ -143,7 +143,7 @@ ol {
 }
 
 .textLink {
-  color: $Primary50;
+  color: $Gray-50;
   font-size: 10px;
   font-weight: 400;
   display: -webkit-box;
@@ -186,7 +186,7 @@ ol {
   height: 1px;
   -webkit-animation: textLink 0.8s ease forwards;
   animation: textLink 0.8s ease forwards;
-  background-color: $Primary50;
+  background-color: $Gray-50;
 }
 
 @keyframes textLink {
@@ -221,5 +221,5 @@ ol {
   height: 1px;
   -webkit-animation: textLink 0.8s ease forwards;
   animation: textLink 0.8s ease forwards;
-  background-color: $Primary600;
+  background-color: $Gray-600;
 }

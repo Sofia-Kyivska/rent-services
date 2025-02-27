@@ -1,11 +1,7 @@
 $mobile: '360px';
 $tablet: '768px';
 $desktop: '1366px';
-
 //old styles
-
-//Primary Color
-
 $Primary900: #131112;
 $Primary800: #333132;
 $Primary600: #646263;
@@ -13,24 +9,15 @@ $Primary400: #acaaab;
 $Primary300: #d1cfd0;
 $Primary100: #efedee;
 $Primary50: #f9f6f8;
-
-//Secondary Color
-
 $SecondaryColor: #f6f6f4;
-
-//Alerts Color
-
 $Error: #a20b0b;
 $Warning: #ffc400;
 $Success: #00793c;
 $System: #2320c6;
-
 $lightFontColor: #ffffff;
 $accentColor: #373737;
 $dashboardBtnBgColor: #f1d889;
 $dashboardHoverBtnBgColor: #f1b806;
-
-
 
 // before this line - Daily Rent Kiev. After this - Sofia Rent
 
@@ -48,15 +35,21 @@ $Primary-50: #F7F8ED;
 
 $Secondary-800:#454943;
 
+// old variables are commented
+// $Primary900: #131112;
 $Gray-900:#131112;
+// $Primary800: #333132;
 $Gray-800:#333132;
 $Gray-700:#514F50;
+// $Primary600: #646263;
 $Gray-600:#646263;
 $Gray-500:#8B898A;
+// $Primary400: #acaaab;
 $Gray-400:#ACAAAB;
 $Gray-300:#D1CFD0;
 $Gray-200:#E3E1E2;
 $Gray-100:#EFEDEE;
+// $Primary50: #f9f6f8;
 $Gray-50:#F9F6F8;
 $Gray-0: #FFFFFF;
 

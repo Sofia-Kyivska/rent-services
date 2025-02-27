@@ -16,6 +16,18 @@
   }
 }
 
+.crumbs{
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 8px;
+  }
+}
+
 .displaySizeMessage {
   width: 90%;
   font-size: clamp(16px, 4vw, 30px);
@@ -81,9 +93,9 @@
   justify-content: space-between;
   gap: 8px;
   padding: 10px;
-  background-color: $Primary400;
+  background-color: $Gray-400;
   border-radius: 5px;
-  border: 1px solid $Primary900;
+  border: 1px solid $Gray-900;
 }
 
 .apartment:not(:last-child) {

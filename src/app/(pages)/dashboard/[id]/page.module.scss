@@ -4,6 +4,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction:column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -12,6 +13,18 @@
   @media screen and (min-width: $tablet) {
     align-items: normal;
     justify-content: normal;
+  }
+}
+
+.crumbs{
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 8px;
   }
 }
 
@@ -50,9 +63,9 @@
     flex-direction: column;
     gap: 8px;
     padding: 10px;
-    background-color: $Primary400;
+    background-color: $Gray-400;
     border-radius: 5px;
-    border: 1px solid $Primary900;
+    border: 1px solid $Gray-900;
     width: calc(50% - 12px);
     height: -webkit-fit-content;
     height: -moz-fit-content;
