@@ -1,10 +1,12 @@
 "use client";
+import { useTranslation } from "react-i18next";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { CldImage } from "next-cloudinary";
 import { toast } from "react-toastify";
 import DashboardForm from "@/components/DashboardForm/DashboardForm";
+import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
 import Loading from "@/app/loading";
 import { GetData } from "@/fetch/clientFetch";
 import { handleDeleteImgFromCloudinary } from "@/utils/handleDeleteImgFromCloudinary";
@@ -25,6 +27,8 @@ const Dashboard = () => {
       return Date.parse(b.updatedAt) - Date.parse(a.updatedAt);
     });
   }
+
+  const { t } = useTranslation();
 
   const router = useRouter();
 
@@ -63,10 +67,19 @@ const Dashboard = () => {
   ) {
     return (
       <div className={`pageTopSection ${styles.container}`}>
+        {!isLoading && (
+          <BreadCrumbs
+            onClick={() => router.back()}
+            title={t("BreadCrumbs.BackLink")}
+            externalClass={styles.crumbs}
+            />
+        )}
+        
         <p className={styles.displaySizeMessage}>
           Для користування цим функціоналом розмір Вашого екрану повинен бути не
           менше 768 пікселів.
-        </p>
+        </p>        
+               
         {!isLoading && <p className={styles.priorityList}>Значення пріоритетів: {sortedPriorities}</p>}
         {isLoading ? (
           <Loading />

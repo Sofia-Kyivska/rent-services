@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { CldImage } from "next-cloudinary";
 import { toast } from "react-toastify";
 import UpdatingForm from "@/components/UpdatingForm/UpdatingForm";
+import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
 import { handleDeleteImgFromMongoDB } from "@/utils/handleDeleteImgFromMongoDB";
 import { handleDeleteImgFromCloudinary } from "@/utils/handleDeleteImgFromCloudinary";
 import Loading from "@/app/loading";
@@ -29,6 +31,8 @@ const EditCard = ({ params }) => {
     changedData.descriptionRu = data?.descriptionRu.split(" | ");
   }
 
+  const { t } = useTranslation();
+  
   const router = useRouter();
 
   if (session.status === "loading") {
@@ -52,6 +56,14 @@ const EditCard = ({ params }) => {
   ) {
     return (
       <div className={`pageTopSection ${styles.container}`}>
+        {!isLoading && (
+          <BreadCrumbs
+            onClick={() => router.back()}
+            title={t("BreadCrumbs.BackLink")}
+            externalClass={styles.crumbs}
+            />
+        )}
+
         <p className={styles.displaySizeMessage}>
           Для користування цим функціоналом розмір Вашого екрану повинен бути не
           менше 768 пікселів.
