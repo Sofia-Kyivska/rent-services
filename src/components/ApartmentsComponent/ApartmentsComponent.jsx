@@ -136,7 +136,7 @@ const ApartmentsComponent = () => {
         Оренда квартири Київ. Київ квартири. Квартири подобово.
       </h1>
       <div className="container">
-        <div className={styles.filterContainer}>
+        <div className={styles.BreadCrumbs}>
           {!isLoading && (
             <BreadCrumbs
               onClick={() => router.back()}
@@ -144,18 +144,20 @@ const ApartmentsComponent = () => {
               externalClass={styles.bread}
             />
           )}
-          <ButtonFilter />
         </div>
-        <Filter
-          amenitiesArr={amenitiesArr}
-          setAmenitiesArr={setAmenitiesArr}
-          numberBedsArr={numberBedsArr}
-          setNumberBedsArr={setNumberBedsArr}
-        />
-        <FilterRooms
-          numberRoomsArr={numberRoomsArr}
-          setNumberRoomsArr={setNumberRoomsArr}
-        />
+        <div className={styles.filterContainer}>
+          <FilterRooms
+            numberRoomsArr={numberRoomsArr}
+            setNumberRoomsArr={setNumberRoomsArr}
+          />
+          {/* <ButtonFilter /> */}
+          <Filter
+            amenitiesArr={amenitiesArr}
+            setAmenitiesArr={setAmenitiesArr}
+            numberBedsArr={numberBedsArr}
+            setNumberBedsArr={setNumberBedsArr}
+          />
+        </div>
         {isLoading ? (
           <IsLoading />
         ) : (

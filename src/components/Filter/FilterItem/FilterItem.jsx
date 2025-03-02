@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { currentLanguages } from "@/data";
 import styles from "./FilterItem.module.scss";
 
-
 const FilterItem = ({
   id,
   titleEn,
@@ -51,19 +50,19 @@ const FilterItem = ({
     ? styles.filterInputCheckbox__Checked
     : styles.filterInputCheckbox;
 
-
   return (
     <>
       {!isLoad && (
         <li className={styles.filterItem}>
-          <p className={styles.filterCheckboxTitle}>
-            {((i18n.language === currentLanguages.EN) && titleEn) || ((i18n.language === currentLanguages.RU) && titleRu) || title}
-          </p>
           <input
             id={id}
             type="checkbox"
             className={filterCheckboxStyles}
-            aria-label={((i18n.language === currentLanguages.EN) && titleEn) || ((i18n.language === currentLanguages.RU) && titleRu) || title}
+            aria-label={
+              (i18n.language === currentLanguages.EN && titleEn) ||
+              (i18n.language === currentLanguages.RU && titleRu) ||
+              title
+            }
             checked={isChecked}
             onChange={() => {
               setActiveIndex(id),
@@ -72,11 +71,15 @@ const FilterItem = ({
                 setIsFilterClear(false);
             }}
           />
+          <p className={styles.filterCheckboxTitle}>
+            {(i18n.language === currentLanguages.EN && titleEn) ||
+              (i18n.language === currentLanguages.RU && titleRu) ||
+              title}
+          </p>
         </li>
       )}
     </>
   );
 };
-
 
 export default FilterItem;

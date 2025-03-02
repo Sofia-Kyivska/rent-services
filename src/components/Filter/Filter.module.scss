@@ -1,4 +1,11 @@
 @import "../../styles/_variables.scss";
+.newExternalContainer_closed {
+}
+
+.newExternalContainer_opened {
+  background-color: $Primary-50;
+  padding: 12px 16px;
+}
 
 .container {
   display: -webkit-box;
@@ -14,9 +21,12 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
+  // padding: 12px 16px;
   margin-left: auto;
   margin-right: auto;
+
+  background-color: $Primary-50;
 
   opacity: 1;
   overflow: auto;
@@ -24,17 +34,17 @@
   -o-transition: height 0.5s linear, opacity 0.5s linear;
   transition: height 0.5s linear, opacity 0.5s linear;
   max-width: 330px;
-  height: 300px;
+  height: 810px;
 
   @media screen and (min-width: $tablet) {
     max-width: 680px;
-    height: 220px;
+    // height: 220px;
   }
 
   @media screen and (min-width: $desktop) {
     margin-bottom: 30px;
     max-width: 757px;
-    height: 230px;
+    // height: 230px;
   }
 
   &::-webkit-scrollbar {
@@ -93,6 +103,19 @@
   stroke: $accentColor;
 }
 
+// .filterButtonsContainer {
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -webkit-box-orient: vertical;
+//   -webkit-box-direction: normal;
+//   -ms-flex-direction: column;
+//   flex-direction: column;
+//   -webkit-box-align: center;
+//   -ms-flex-align: center;
+//   align-items: center;
+// }
+
 .filterButtonsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,29 +129,26 @@
   align-items: center;
 }
 
-.filterButtonsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.inFilterHeader {
+  margin: 12px auto;
+  color: $Gray-900;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25.6px;
+  letter-spacing: 0;
 }
 
 .filterAmenitisContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  flex-direction: column;
 
   -webkit-column-gap: 10px;
   -moz-column-gap: 10px;
@@ -148,7 +168,7 @@
   }
 
   &:not(:first-child) {
-    margin-top: 20px;
+    // margin-top: 20px;
   }
 }
 
@@ -159,6 +179,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -168,17 +189,19 @@
   }
 
   // font-family: var(--font--lato);
-  padding: 8px 36px;
+  width: 100%;
+  padding: 8px 81px;
   color: $Primary800;
   font-size: 16px;
   font-weight: 400;
+  line-height: 25.6px;
   word-wrap: break-word;
 
-  border-radius: 24px;
+  border-radius: 8px;
   border: 1px solid $accentColor;
 
   background-color: $Primary50;
-  margin-top: 18px;
+  // margin-top: 18px;
 
   cursor: pointer;
 
@@ -285,4 +308,24 @@
   @media screen and (min-width: $tablet) {
     font-size: 20px;
   }
+}
+
+.bedsList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-bottom: 12px;
+}
+
+.bedsItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputBeds {
+  width: 24px;
+  height: 24px;
+
+  margin-right: 16px;
 }

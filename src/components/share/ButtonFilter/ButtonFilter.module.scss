@@ -2,15 +2,21 @@
 
 .filterContainer {
   height: 24px;
+  max-width: 116px;
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 
-  @media screen and (min-width: $tablet) {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    -webkit-transform: translate(50%, -60%);
-    -ms-transform: translate(50%, -60%);
-    transform: translate(50%, -60%);
-  }
+  // @media screen and (min-width: $tablet) {
+  //   position: absolute;
+  //   top: 50%;
+  //   right: 50%;
+  //   -webkit-transform: translate(50%, -60%);
+  //   -ms-transform: translate(50%, -60%);
+  //   transform: translate(50%, -60%);
+  // }
+  background-color: $Primary-50;
 }
 
 .filterBtnContainer {
@@ -27,23 +33,23 @@
   -moz-column-gap: 16px;
   column-gap: 16px;
 
-  &:hover>.filterSvg {
-    stroke: $dashboardBtnBgColor;
+  &:hover > .filterSvg {
+    stroke: $Primary-900;
   }
 
-  &:hover>.filter {
-    color: $dashboardBtnBgColor;
+  &:hover > .filter {
+    color: $Primary-900;
   }
 }
 
 .filterSvg {
   width: 24px;
   height: 24px;
-  stroke: $Primary100;
+  stroke: $Secondary-800;
 }
 
 .filter {
-  color: $Primary100;
+  color: $Secondary-800;
   // font-family: var(--font--lato);
   font-size: 16px;
   font-weight: 400;
