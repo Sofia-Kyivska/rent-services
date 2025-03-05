@@ -56,12 +56,12 @@ const Filter = ({
 
   return (
     <>
-      <div className={isBackgroundShown}>
-        <ButtonFilter />
-        <div className={isFilterShown}>
-          <div className={styles.filterButtonsContainer}>
-            <p className={styles.inFilterHeader}>Умови</p>
-            {/* <div className={styles.filterAmenitisContainer}>
+      {/* <div className={isBackgroundShown}> */}
+      {/* <ButtonFilter /> */}
+      <div className={isFilterShown}>
+        <div className={styles.filterButtonsContainer}>
+          <p className={styles.inFilterHeader}>Умови</p>
+          {/* <div className={styles.filterAmenitisContainer}>
           <p className={styles.textBeds}>{!isLoad && t("Buttons.FilterSleepingPlaces")}</p>
 
           <button className={styles.buttonBeds} onClick={handleDecrementFilter}>
@@ -72,102 +72,102 @@ const Filter = ({
             +
           </button>
         </div> */}
-            <ul className={styles.filterAmenitisContainer}>
-              {!isLoad &&
-                amenitiesWithoutWiFi.map((item) => {
-                  return (
-                    <FilterItem
-                      key={item.id}
-                      id={item.id}
-                      title={item.titleUa}
-                      titleEn={item.titleEn}
-                      titleRu={item.titleRu}
-                      activeIndex={activeIndex}
-                      setActiveIndex={setActiveIndex}
-                      amenitiesArr={amenitiesArr}
-                      setAmenitiesArr={setAmenitiesArr}
-                      isFilterClear={isFilterClear}
-                      setIsFilterClear={setIsFilterClear}
-                    />
-                  );
-                })}
-            </ul>
-          </div>
-          <p className={styles.inFilterHeader}>Спальні місця</p>
-          <ul className={styles.bedsList}>
-            <li className={styles.bedsItem}>
-              <input
-                type="radio"
-                value="2"
-                id="2"
-                name="bedsQuantity"
-                className={styles.inputBeds}
-              />
-              <label htmlFor="2"> 2</label>
-            </li>
-            <li className={styles.bedsItem}>
-              <input
-                type="radio"
-                value="3"
-                id="3"
-                name="bedsQuantity"
-                className={styles.inputBeds}
-              />
-              <label htmlFor="3"> 3</label>
-            </li>
-            <li className={styles.bedsItem}>
-              <input
-                type="radio"
-                value="4"
-                id="4"
-                name="bedsQuantity"
-                className={styles.inputBeds}
-              />
-              <label htmlFor="4"> 4</label>
-            </li>
-            <li className={styles.bedsItem}>
-              <input
-                type="radio"
-                value="5"
-                id="5"
-                name="bedsQuantity"
-                className={styles.inputBeds}
-              />
-              <label htmlFor="5"> 5</label>
-            </li>
-            <li className={styles.bedsItem}>
-              <input
-                type="radio"
-                value="6"
-                id="6"
-                name="bedsQuantity"
-                className={styles.inputBeds}
-              />
-              <label htmlFor="6"> 6</label>
-            </li>
+          <ul className={styles.filterAmenitisContainer}>
+            {!isLoad &&
+              amenitiesWithoutWiFi.map((item) => {
+                return (
+                  <FilterItem
+                    key={item.id}
+                    id={item.id}
+                    title={item.titleUa}
+                    titleEn={item.titleEn}
+                    titleRu={item.titleRu}
+                    activeIndex={activeIndex}
+                    setActiveIndex={setActiveIndex}
+                    amenitiesArr={amenitiesArr}
+                    setAmenitiesArr={setAmenitiesArr}
+                    isFilterClear={isFilterClear}
+                    setIsFilterClear={setIsFilterClear}
+                  />
+                );
+              })}
           </ul>
-          <div className={styles.filterSearchResetContainer}>
-            {!isLoad && (
-              <>
-                <button
-                  type="button"
-                  className={styles.filterButtonSearch}
-                  onClick={() => handleResetFilter()}
-                >
-                  {t("Buttons.FilterClear")}
-                </button>
-                <button
-                  type="button"
-                  className={styles.filterButtonSearch}
-                  onClick={() => setFilterShown(!filterShown)}
-                >
-                  {t("Buttons.CloseFilterBtn")}
-                </button>
-              </>
-            )}
-          </div>
+        </div>
+        <p className={styles.inFilterHeader}>Спальні місця</p>
+        <ul className={styles.bedsList}>
+          <li className={styles.bedsItem}>
+            <input
+              type="radio"
+              value="2"
+              id="2"
+              name="bedsQuantity"
+              className={styles.inputBeds}
+            />
+            <label htmlFor="2"> 2</label>
+          </li>
+          <li className={styles.bedsItem}>
+            <input
+              type="radio"
+              value="3"
+              id="3"
+              name="bedsQuantity"
+              className={styles.inputBeds}
+            />
+            <label htmlFor="3"> 3</label>
+          </li>
+          <li className={styles.bedsItem}>
+            <input
+              type="radio"
+              value="4"
+              id="4"
+              name="bedsQuantity"
+              className={styles.inputBeds}
+            />
+            <label htmlFor="4"> 4</label>
+          </li>
+          <li className={styles.bedsItem}>
+            <input
+              type="radio"
+              value="5"
+              id="5"
+              name="bedsQuantity"
+              className={styles.inputBeds}
+            />
+            <label htmlFor="5"> 5</label>
+          </li>
+          <li className={styles.bedsItem}>
+            <input
+              type="radio"
+              value="6"
+              id="6"
+              name="bedsQuantity"
+              className={styles.inputBeds}
+            />
+            <label htmlFor="6"> 6</label>
+          </li>
+        </ul>
+        <div className={styles.filterSearchResetContainer}>
+          {!isLoad && (
+            <>
+              <button
+                type="button"
+                className={styles.filterButtonSearch}
+                onClick={() => handleResetFilter()}
+              >
+                {t("Buttons.FilterClear")}
+              </button>
+              <button
+                type="button"
+                className={styles.filterButtonSearch}
+                onClick={() => setFilterShown(!filterShown)}
+              >
+                {t("Buttons.CloseFilterBtn")}
+              </button>
+            </>
+          )}
         </div>
       </div>
+      {/* </div> */}
     </>
   );
 };
