@@ -1,7 +1,8 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/navigation";
+import { SiteContext } from "@/context/SiteContext";
 import ApartItem from "@/components/ApartItem/ApartItem";
 import IsLoading from "@/components/share/IsLoading/IsLoading";
 import ButtonFilter from "@/components/share/ButtonFilter/ButtonFilter";
@@ -23,6 +24,7 @@ const ApartmentsComponent = () => {
   const [numberBedsArr, setNumberBedsArr] = useState([]);
   const { t, i18n } = useTranslation();
   const containerRef = useRef();
+  const { filterShown, setFilterShown } = useContext(SiteContext);
 
   // console.log(data);
 
@@ -130,13 +132,17 @@ const ApartmentsComponent = () => {
     // eslint-disable-next-line
   }, [filteredAmenitiesData, loadedCount]);
 
+  const isFilterShown = filterShown
+    ? styles.containerOneRooms_Opened + " " + styles.containerOneRooms
+    : styles.containerOneRooms;
+
   return (
     <section className={`pageTopSection ${styles.container}`}>
       <h1 className={seoStyles.titleHidden}>
         Оренда квартири Київ. Київ квартири. Квартири подобово.
       </h1>
       <div className="container">
-        <div className={styles.filterContainer}>
+        <div className={styles.BreadCrumbs}>
           {!isLoading && (
             <BreadCrumbs
               onClick={() => router.back()}
@@ -144,22 +150,34 @@ const ApartmentsComponent = () => {
               externalClass={styles.bread}
             />
           )}
-          <ButtonFilter />
         </div>
-        <Filter
-          amenitiesArr={amenitiesArr}
-          setAmenitiesArr={setAmenitiesArr}
-          numberBedsArr={numberBedsArr}
-          setNumberBedsArr={setNumberBedsArr}
-        />
-        <FilterRooms
-          numberRoomsArr={numberRoomsArr}
-          setNumberRoomsArr={setNumberRoomsArr}
-        />
+        <div className={styles.filterContainer}>
+          <FilterRooms
+            numberRoomsArr={numberRoomsArr}
+            setNumberRoomsArr={setNumberRoomsArr}
+          />
+          <ButtonFilter />
+          {/* <Filter
+            amenitiesArr={amenitiesArr}
+            setAmenitiesArr={setAmenitiesArr}
+            numberBedsArr={numberBedsArr}
+            setNumberBedsArr={setNumberBedsArr}
+          /> */}
+        </div>
+
         {isLoading ? (
           <IsLoading />
         ) : (
-          <ul ref={containerRef} className={styles.containerOneRooms}>
+          // <div className={isFilterShown}>
+          <ul ref={containerRef} className={isFilterShown}>
+            {filterShown && (
+              <Filter
+                amenitiesArr={amenitiesArr}
+                setAmenitiesArr={setAmenitiesArr}
+                numberBedsArr={numberBedsArr}
+                setNumberBedsArr={setNumberBedsArr}
+              />
+            )}
             {filteredAmenitiesData?.length > 0 &&
               filteredAmenitiesData
                 .slice(0, loadedCount)
@@ -197,6 +215,7 @@ const ApartmentsComponent = () => {
                   />
                 ))}
           </ul>
+          // </div>
         )}
         {!isLoading && filteredAmenitiesData?.length <= 0 && (
           <div className={styles.notFoundTextStyles}>
