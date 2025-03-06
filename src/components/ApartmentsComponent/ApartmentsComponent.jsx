@@ -136,6 +136,14 @@ const ApartmentsComponent = () => {
     ? styles.containerOneRooms_Opened + " " + styles.containerOneRooms
     : styles.containerOneRooms;
 
+  const isButtonFilterShownInContainer = filterShown
+    ? styles.filterButtonHidden
+    : styles.filterButtonShown;
+
+  const isButtonFilterShownInFilter = filterShown
+    ? styles.filterButtonShown
+    : styles.filterButtonHidden;
+
   return (
     <section className={`pageTopSection ${styles.container}`}>
       <h1 className={seoStyles.titleHidden}>
@@ -156,7 +164,7 @@ const ApartmentsComponent = () => {
             numberRoomsArr={numberRoomsArr}
             setNumberRoomsArr={setNumberRoomsArr}
           />
-          <ButtonFilter />
+          <ButtonFilter externalClass={isButtonFilterShownInContainer} />
           {/* <Filter
             amenitiesArr={amenitiesArr}
             setAmenitiesArr={setAmenitiesArr}
@@ -171,12 +179,15 @@ const ApartmentsComponent = () => {
           // <div className={isFilterShown}>
           <ul ref={containerRef} className={isFilterShown}>
             {filterShown && (
-              <Filter
-                amenitiesArr={amenitiesArr}
-                setAmenitiesArr={setAmenitiesArr}
-                numberBedsArr={numberBedsArr}
-                setNumberBedsArr={setNumberBedsArr}
-              />
+              <div className={styles.filterWithButton}>
+                <ButtonFilter externalClass={isButtonFilterShownInFilter} />
+                <Filter
+                  amenitiesArr={amenitiesArr}
+                  setAmenitiesArr={setAmenitiesArr}
+                  numberBedsArr={numberBedsArr}
+                  setNumberBedsArr={setNumberBedsArr}
+                />
+              </div>
             )}
             {filteredAmenitiesData?.length > 0 &&
               filteredAmenitiesData

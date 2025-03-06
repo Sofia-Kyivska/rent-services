@@ -8,6 +8,8 @@
   margin-right: auto;
   margin-left: auto;
   padding: 0 12px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px 0px rgba(69, 73, 67, 0.25);
 
   @media screen and (min-width: $tablet) {
     margin: 0;
@@ -50,11 +52,11 @@
 .filterSvg {
   width: 24px;
   height: 24px;
-  stroke: $Secondary-800;
+  stroke: $Gray-900;
 }
 
 .filter {
-  color: $Secondary-800;
+  color: $Gray-900;
   // font-family: var(--font--lato);
   font-size: 16px;
   font-weight: 400;

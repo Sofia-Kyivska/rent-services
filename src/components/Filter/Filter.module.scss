@@ -219,9 +219,11 @@
   word-wrap: break-word;
 
   border-radius: 8px;
-  border: 1px solid $accentColor;
+  border: none;
 
-  background-color: $Primary50;
+  background-color: $lightFontColor;
+  box-shadow: 2px 2px 4px 0px rgba(69, 73, 67, 0.25) !important;
+
   // margin-top: 18px;
 
   cursor: pointer;

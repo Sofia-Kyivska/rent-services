@@ -54,6 +54,30 @@
   // }
 }
 
+.filterButtonHidden {
+  margin-top: 0;
+  margin-bottom: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+.filterButtonShown {
+}
+
+.filterWithButton {
+  box-shadow: 2px 2px 4px 0px rgba(69, 73, 67, 0.25);
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: $Primary-50;
+
+  & :first-child {
+    box-shadow: none;
+  }
+}
+
 .containerOneRooms {
   display: -ms-grid;
   display: grid;
@@ -65,8 +89,9 @@
   -moz-column-gap: 30px;
   column-gap: 30px;
   row-gap: 12px;
-  padding: 12px 0 16px 0;
+  // padding: 12px 0 16px 0;
   width: 100%;
+  margin-top: 12px;
 
   @media screen and (min-width: $tablet) {
     grid-template-columns: repeat(2, 1fr);
@@ -86,6 +111,7 @@
 }
 
 .containerOneRooms_Opened {
+  margin-top: 0;
   @media screen and (min-width: $tablet) {
     display: -ms-grid;
     display: grid;
@@ -160,24 +186,24 @@
 
 .bread {
   & svg {
-    stroke: $lightFontColor;
+    stroke: $Primary900;
     fill: none;
     width: 24px;
     height: 24px;
   }
 
   & p {
-    color: $lightFontColor;
+    color: $Primary900;
   }
 }
 
-.abrakadabra {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-}
+// .abrakadabra {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   grid-template-rows: auto;
+// }
 
-.abrakadabra__hidden {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
+// .abrakadabra__hidden {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+// }

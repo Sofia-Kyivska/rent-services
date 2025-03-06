@@ -3,8 +3,7 @@ import { SiteContext } from "@/context/SiteContext";
 import { useContext, useState, useEffect } from "react";
 import styles from "./ButtonFilter.module.scss";
 
-
-const ButtonFilter = () => {
+const ButtonFilter = ({ externalClass }) => {
   const { filterShown, setFilterShown } = useContext(SiteContext);
   const { t } = useTranslation();
   const [isLoad, setIsLoad] = useState(true);
@@ -12,9 +11,8 @@ const ButtonFilter = () => {
     setIsLoad(false);
   }, []);
 
-
   return (
-    <div className={styles.filterContainer}>
+    <div className={`${styles.filterContainer} ${externalClass}`}>
       {!isLoad && (
         <button
           type="button"
@@ -32,6 +30,5 @@ const ButtonFilter = () => {
     </div>
   );
 };
-
 
 export default ButtonFilter;
