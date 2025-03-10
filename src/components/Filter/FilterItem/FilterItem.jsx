@@ -50,6 +50,10 @@ const FilterItem = ({
     ? styles.filterInputCheckbox__Checked
     : styles.filterInputCheckbox;
 
+  const IconIsChecked = isChecked
+    ? styles.checked + " " + styles.checkedOn
+    : styles.checked + " " + styles.checkedOff;
+
   return (
     <>
       {!isLoad && (
@@ -57,7 +61,7 @@ const FilterItem = ({
           <input
             id={id}
             type="checkbox"
-            className={filterCheckboxStyles}
+            className={styles.checkbox}
             aria-label={
               (i18n.language === currentLanguages.EN && titleEn) ||
               (i18n.language === currentLanguages.RU && titleRu) ||
@@ -71,11 +75,14 @@ const FilterItem = ({
                 setIsFilterClear(false);
             }}
           />
-          <p className={styles.filterCheckboxTitle}>
+          <label className={styles.blogCheckboxDesc} htmlFor={id}>
+            <svg className={IconIsChecked}>
+              <use href="sprite.svg#icon-checked" />
+            </svg>
             {(i18n.language === currentLanguages.EN && titleEn) ||
               (i18n.language === currentLanguages.RU && titleRu) ||
               title}
-          </p>
+          </label>
         </li>
       )}
     </>

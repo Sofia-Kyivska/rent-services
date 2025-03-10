@@ -47,6 +47,9 @@ const ApartmentsComponent = () => {
   });
 
   const filteredBedsData = filteredRoomsData?.filter((bed) => {
+    // console.log(numberBedsArr);
+    //! працює від зворотнього, якщо в numberBedsArr [2], не покаже 2к квартири,
+    //! якщо [2,3] - не покаже 2к і 3к квартири, і так далі.
     const filteredBeds = numberBedsArr.every(
       (numberBed) => numberBed != bed.bedsQuantity
     );
@@ -136,6 +139,18 @@ const ApartmentsComponent = () => {
     ? styles.containerOneRooms_Opened + " " + styles.containerOneRooms
     : styles.containerOneRooms;
 
+  const isButtonFilterShownInContainer = filterShown
+    ? styles.filterButtonHidden
+    : styles.filterButtonShown;
+
+  const isButtonFilterShownInFilter = filterShown
+    ? styles.filterButtonShown
+    : styles.filterButtonHidden;
+
+  const isFilterContainerFull = filterShown
+    ? styles.filterContainer_rooms
+    : styles.filterContainer;
+
   return (
     <section className={`pageTopSection ${styles.container}`}>
       <h1 className={seoStyles.titleHidden}>
@@ -156,7 +171,9 @@ const ApartmentsComponent = () => {
             numberRoomsArr={numberRoomsArr}
             setNumberRoomsArr={setNumberRoomsArr}
           />
-          <ButtonFilter />
+
+          <ButtonFilter externalClass={isButtonFilterShownInContainer} />
+
           {/* <Filter
             amenitiesArr={amenitiesArr}
             setAmenitiesArr={setAmenitiesArr}
@@ -171,12 +188,15 @@ const ApartmentsComponent = () => {
           // <div className={isFilterShown}>
           <ul ref={containerRef} className={isFilterShown}>
             {filterShown && (
-              <Filter
-                amenitiesArr={amenitiesArr}
-                setAmenitiesArr={setAmenitiesArr}
-                numberBedsArr={numberBedsArr}
-                setNumberBedsArr={setNumberBedsArr}
-              />
+              <div className={styles.filterWithButton}>
+                <ButtonFilter externalClass={isButtonFilterShownInFilter} />
+                <Filter
+                  amenitiesArr={amenitiesArr}
+                  setAmenitiesArr={setAmenitiesArr}
+                  numberBedsArr={numberBedsArr}
+                  setNumberBedsArr={setNumberBedsArr}
+                />
+              </div>
             )}
             {filteredAmenitiesData?.length > 0 &&
               filteredAmenitiesData

@@ -63,13 +63,74 @@
 
   @media screen and (min-width: $tablet) {
     margin-right: 16px;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   @media screen and (min-width: $desktop) {
     margin-right: 16px;
     font-size: 20px;
   }
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  height: max-content;
+}
+
+.blogCheckboxDesc {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $Gray-900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  column-gap: 16px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    border-radius: 1px;
+    width: 24px;
+    height: 24px;
+    border: double 1px $Primary-900;
+    background-image: linear-gradient($Gray-100, $Gray-100);
+    //   $gradient;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+  }
+}
+
+.checked {
+  position: absolute;
+  top: 45%;
+  left: 1%;
+  transform: translateY(-45%);
+  width: 24px;
+  height: 24px;
+  stroke: $Primary-900;
+  fill: $Primary-900;
+}
+
+.checkedOff {
+  opacity: 0;
+  z-index: -1;
+}
+
+.checkedOn {
+  opacity: 1;
+  z-index: 0;
 }
 
 //!------НЕ ВИДАЛЯТИ, МОЖЕ ПОТІМ ЗНАДОБИТЬСЯ

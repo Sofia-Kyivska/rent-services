@@ -17,7 +17,8 @@ const Filter = ({
   const { filterShown, setFilterShown } = useContext(SiteContext);
   const [isLoad, setIsLoad] = useState(true);
   const [isFilterClear, setIsFilterClear] = useState(false);
-  const [filterBeds, setFilterBeds] = useState(2);
+  // const [filterBeds, setFilterBeds] = useState(2);
+  const [lastCheckedBed, setLastCheckedBed] = useState(null);
   const { t } = useTranslation();
   useEffect(() => {
     setIsLoad(false);
@@ -27,32 +28,71 @@ const Filter = ({
     (amenity) => amenity.titleUa !== "Wi-Fi"
   );
 
-  const handleIncrementFilter = () => {
-    if (filterBeds === 6) return;
-    setFilterBeds((prevFilterBeds) => prevFilterBeds + 1);
+  const handleChooseBeds = () => {
+    //! це треба, щоб можна було зняти відмітку з радіобаттона,коли фільтр очищується
+    setLastCheckedBed(event.target);
 
-    setNumberBedsArr(() => [...numberBedsArr, filterBeds]);
+    switch (event.target.value) {
+      case "2":
+        setNumberBedsArr(() => [3, 4, 5, 6]); // якщо хочемо бачити квартири, де тільки 2 місця
+        //!- закоментувати 37 строчку, якщо хочемо бачити всі квартири, де помістяться 2 людини
+        break;
+      case "3":
+        setNumberBedsArr(() => [2, 4, 5, 6]); // якщо хочемо бачити квартири, де тільки 3 місця
+        //setNumberBedsArr(() => [2]);
+        //!- закоментувати 41 строчку, розкоментувати 42 якщо хочемо бачити всі квартири, де помістяться 3 людини
+        break;
+      case "4":
+        setNumberBedsArr(() => [2, 3, 5, 6]); // якщо хочемо бачити квартири, де тільки 4 місця
+        //setNumberBedsArr(() => [2, 3]);
+        //!- закоментувати 46 строчку, розкоментувати 47 якщо хочемо бачити всі квартири, де помістяться 4 людини
+        break;
+      case "5":
+        setNumberBedsArr(() => [2, 3, 4, 6]); // якщо хочемо бачити квартири, де тільки 5 місць
+        //setNumberBedsArr(() => [2, 3, 4]);
+        //!- закоментувати 51 строчку, розкоментувати 52 якщо хочемо бачити всі квартири, де помістяться 5 людей
+        break;
+      case "6":
+        setNumberBedsArr(() => [2, 3, 4, 5]);
+        //!- а тут однаково для обох варіантів
+        break;
+      default:
+        console.log("такого не може бути");
+        setNumberBedsArr(() => []);
+        break;
+    }
   };
+  // console.log(lastCheckedBed);
+  // const handleIncrementFilter = () => {
+  //   if (filterBeds === 6) return;
+  //   setFilterBeds((prevFilterBeds) => prevFilterBeds + 1);
 
-  const handleDecrementFilter = () => {
-    if (filterBeds === 2) return;
-    setFilterBeds((prevFilterBeds) => prevFilterBeds - 1);
-    setNumberBedsArr(() =>
-      numberBedsArr.filter((numberBeds) => numberBeds != filterBeds - 1)
-    );
-  };
+  //   setNumberBedsArr(() => [...numberBedsArr, filterBeds]);
+  //   console.log(numberBedsArr);
+  // };
+
+  // const handleDecrementFilter = () => {
+  //   if (filterBeds === 2) return;
+  //   setFilterBeds((prevFilterBeds) => prevFilterBeds - 1);
+  //   setNumberBedsArr(() =>
+  //     numberBedsArr.filter((numberBeds) => numberBeds != filterBeds - 1)
+  //   );
+  //   console.log(numberBedsArr);
+  // };
 
   const handleResetFilter = () => {
     setIsFilterClear(true);
+    setNumberBedsArr(() => []);
+    lastCheckedBed.checked = false;
   };
 
   const isFilterShown = filterShown
     ? styles.container
     : styles.container__hidden;
 
-  const isBackgroundShown = filterShown
-    ? styles.newExternalContainer_opened
-    : styles.newExternalContainer_closed;
+  // const isBackgroundShown = filterShown
+  //   ? styles.newExternalContainer_opened
+  //   : styles.newExternalContainer_closed;
 
   return (
     <>
@@ -62,16 +102,24 @@ const Filter = ({
         <div className={styles.filterButtonsContainer}>
           <p className={styles.inFilterHeader}>Умови</p>
           {/* <div className={styles.filterAmenitisContainer}>
-          <p className={styles.textBeds}>{!isLoad && t("Buttons.FilterSleepingPlaces")}</p>
+            <p className={styles.textBeds}>
+              {!isLoad && t("Buttons.FilterSleepingPlaces")}
+            </p>
 
-          <button className={styles.buttonBeds} onClick={handleDecrementFilter}>
-            -
-          </button>
-          <span className={styles.numberBeds}>{filterBeds}</span>
-          <button className={styles.buttonBeds} onClick={handleIncrementFilter}>
-            +
-          </button>
-        </div> */}
+            <button
+              className={styles.buttonBeds}
+              onClick={handleDecrementFilter}
+            >
+              -
+            </button>
+            <span className={styles.numberBeds}>{filterBeds}</span>
+            <button
+              className={styles.buttonBeds}
+              onClick={handleIncrementFilter}
+            >
+              +
+            </button>
+          </div> */}
           <ul className={styles.filterAmenitisContainer}>
             {!isLoad &&
               amenitiesWithoutWiFi.map((item) => {
@@ -97,53 +145,73 @@ const Filter = ({
         <ul className={styles.bedsList}>
           <li className={styles.bedsItem}>
             <input
+              onClick={handleChooseBeds}
               type="radio"
               value="2"
-              id="2"
+              id="32"
               name="bedsQuantity"
-              className={styles.inputBeds}
+              className={styles.bedsInput}
             />
-            <label htmlFor="2"> 2</label>
+            <label className={styles.bedsLabel} htmlFor="32">
+              {" "}
+              2
+            </label>
           </li>
           <li className={styles.bedsItem}>
             <input
+              onClick={handleChooseBeds}
               type="radio"
               value="3"
-              id="3"
+              id="33"
               name="bedsQuantity"
-              className={styles.inputBeds}
+              className={styles.bedsInput}
             />
-            <label htmlFor="3"> 3</label>
+            <label className={styles.bedsLabel} htmlFor="33">
+              {" "}
+              3
+            </label>
           </li>
           <li className={styles.bedsItem}>
             <input
+              onClick={handleChooseBeds}
               type="radio"
               value="4"
-              id="4"
+              id="34"
               name="bedsQuantity"
-              className={styles.inputBeds}
+              className={styles.bedsInput}
             />
-            <label htmlFor="4"> 4</label>
+            <label className={styles.bedsLabel} htmlFor="34">
+              {" "}
+              4
+            </label>
           </li>
           <li className={styles.bedsItem}>
             <input
+              onClick={handleChooseBeds}
               type="radio"
               value="5"
-              id="5"
+              id="35"
               name="bedsQuantity"
-              className={styles.inputBeds}
+              className={styles.bedsInput}
             />
-            <label htmlFor="5"> 5</label>
+            <label className={styles.bedsLabel} htmlFor="35">
+              {" "}
+              5
+            </label>
           </li>
           <li className={styles.bedsItem}>
             <input
+              onClick={handleChooseBeds}
               type="radio"
               value="6"
-              id="6"
+              id="36"
               name="bedsQuantity"
-              className={styles.inputBeds}
+              className={styles.bedsInput}
             />
-            <label htmlFor="6"> 6</label>
+            <label className={styles.bedsLabel} htmlFor="36">
+              {" "}
+              6
+            </label>
           </li>
         </ul>
         <div className={styles.filterSearchResetContainer}>
