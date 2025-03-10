@@ -58,10 +58,10 @@ const FilterRoomItem = ({
                 toggleNumberRoomsForFilter();
             }}
           />
-          <p className={styles.filterRoomText}>
+          <label className={styles.filterRoomText} htmlFor={id}>
             {title}
             {t("Buttons.FilterQuantRooms")}
-          </p>
+          </label>
         </>
       )}
     </li>

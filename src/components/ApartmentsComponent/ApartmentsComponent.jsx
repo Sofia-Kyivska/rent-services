@@ -47,6 +47,9 @@ const ApartmentsComponent = () => {
   });
 
   const filteredBedsData = filteredRoomsData?.filter((bed) => {
+    // console.log(numberBedsArr);
+    //! працює від зворотнього, якщо в numberBedsArr [2], не покаже 2к квартири,
+    //! якщо [2,3] - не покаже 2к і 3к квартири, і так далі.
     const filteredBeds = numberBedsArr.every(
       (numberBed) => numberBed != bed.bedsQuantity
     );
@@ -144,6 +147,10 @@ const ApartmentsComponent = () => {
     ? styles.filterButtonShown
     : styles.filterButtonHidden;
 
+  const isFilterContainerFull = filterShown
+    ? styles.filterContainer_rooms
+    : styles.filterContainer;
+
   return (
     <section className={`pageTopSection ${styles.container}`}>
       <h1 className={seoStyles.titleHidden}>
@@ -164,7 +171,9 @@ const ApartmentsComponent = () => {
             numberRoomsArr={numberRoomsArr}
             setNumberRoomsArr={setNumberRoomsArr}
           />
+
           <ButtonFilter externalClass={isButtonFilterShownInContainer} />
+
           {/* <Filter
             amenitiesArr={amenitiesArr}
             setAmenitiesArr={setAmenitiesArr}

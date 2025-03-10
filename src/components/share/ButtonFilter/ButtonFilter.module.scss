@@ -15,6 +15,10 @@
     margin: 0;
   }
 
+  @media screen and (min-width: $desktop) {
+    height: 34px;
+  }
+
   // @media screen and (min-width: $tablet) {
   //   position: absolute;
   //   top: 50%;
@@ -52,7 +56,11 @@
 .filterSvg {
   width: 24px;
   height: 24px;
-  stroke: $Gray-900;
+  stroke: $Secondary-800;
+
+  @media screen and (min-width: $desktop) {
+    margin: 5px 0;
+  }
 }
 
 .filter {
@@ -60,5 +68,11 @@
   // font-family: var(--font--lato);
   font-size: 16px;
   font-weight: 400;
+  line-height: 25.6px;
   cursor: pointer;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 34px;
+  }
 }

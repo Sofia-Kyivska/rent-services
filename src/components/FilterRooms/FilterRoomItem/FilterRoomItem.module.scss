@@ -24,10 +24,16 @@
     font-size: 14px;
   }
 
-  // color: $lightFontColor;
+  color: $Primary-900;
   // font-family: var(--font--lato);
   font-size: 16px;
   font-weight: 400;
+  line-height: 25.6px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 34px;
+  }
 }
 
 .filterInputCheckbox {
