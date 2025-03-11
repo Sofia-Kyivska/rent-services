@@ -355,26 +355,67 @@
 }
 
 .bedsInput {
-  width: 24px;
-  height: 24px;
-  color: $Primary-900;
-  background-color: $Primary-900;
-
-  margin-right: 16px;
-
-  &::after {
-    content: "";
-    color: $Primary-900;
-  }
+  position: absolute;
+  opacity: 0;
+  height: max-content;
 }
 
 .bedsLabel {
+  display: inline-block;
   font-weight: 400;
   font-size: 16px;
-  line-height: 25.6px;
+  line-height: 1.6;
+  color: $Gray-900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  column-gap: 16px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #616c46;
+
+    background-image: linear-gradient($Gray-100, $Gray-100);
+    //   $gradient;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    cursor: pointer;
+  }
 
   @media screen and (min-width: $tablet) {
     font-size: 20px;
-    line-height: 34px;
   }
+}
+
+.checked {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 7px;
+
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: #616c46;
+  stroke: $Primary-900;
+  fill: $Primary-900;
+  background-image: linear-gradient(#616c46, #616c46);
+}
+
+.checkedOff {
+  opacity: 0;
+  z-index: -1;
+}
+
+.checkedOn {
+  opacity: 1;
+  z-index: 0;
 }

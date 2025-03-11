@@ -74,7 +74,7 @@
   font-size: 12px;
   font-weight: 400;
   text-overflow: ellipsis;
-  // white-space: nowrap;
+  word-break: break-all;
   overflow: hidden;
   margin-right: auto;
   line-height: 20.4px;
@@ -118,10 +118,13 @@
 }
 
 .homeImg {
+  // display: flex;
+  // flex-shrink: 0;
   position: relative;
   width: 24px;
   height: 24px;
   margin-right: 2px;
+  min-width: 24px;
 }
 
 .priceRooms {

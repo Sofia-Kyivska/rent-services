@@ -181,7 +181,15 @@ const ApartmentsComponent = () => {
             setNumberBedsArr={setNumberBedsArr}
           /> */}
         </div>
-
+        {!isLoading &&
+          window.innerWidth >= 1366 &&
+          filteredAmenitiesData?.length <= 0 && (
+            <div className={styles.notFoundTextStyles}>
+              <p>
+                {notFoundText()} {t("ApartmentsPage.NotFound")}
+              </p>
+            </div>
+          )}
         {isLoading ? (
           <IsLoading />
         ) : (
@@ -237,13 +245,15 @@ const ApartmentsComponent = () => {
           </ul>
           // </div>
         )}
-        {!isLoading && filteredAmenitiesData?.length <= 0 && (
-          <div className={styles.notFoundTextStyles}>
-            <p>
-              {notFoundText()} {t("ApartmentsPage.NotFound")}
-            </p>
-          </div>
-        )}
+        {!isLoading &&
+          window.innerWidth < 1366 &&
+          filteredAmenitiesData?.length <= 0 && (
+            <div className={styles.notFoundTextStyles}>
+              <p>
+                {notFoundText()} {t("ApartmentsPage.NotFound")}
+              </p>
+            </div>
+          )}
         {showLoading && (
           <div className={styles.loading}>
             <IsLoading />
