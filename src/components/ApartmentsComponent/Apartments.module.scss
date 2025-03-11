@@ -118,13 +118,13 @@
   border-radius: 8px;
   padding: 12px 16px;
   background-color: $Primary-50;
-  animation: blogShowOpenMobile 700ms ease-in-out;
+  animation: blogShowOpenMobile 1000ms ease-in-out;
   & :first-child {
     box-shadow: none;
   }
 
   @media screen and (min-width: $tablet) {
-    animation: blogShowOpenTablet 500ms ease-in-out;
+    animation: blogShowOpenTablet 700ms ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,6 +242,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-top: 12px;
 
   @media screen and (min-width: $tablet) {
     font-size: 28px;
@@ -249,6 +250,11 @@
 
   @media screen and (min-width: 1024px) {
     font-size: 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    right: -16px;
   }
 }
 
