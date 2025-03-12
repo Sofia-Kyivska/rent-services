@@ -40,6 +40,10 @@ const FilterRoomItem = ({
     ? styles.filterInputCheckbox__Checked
     : styles.filterInputCheckbox;
 
+  const IconIsChecked = isChecked
+    ? styles.checked + " " + styles.checkedOn
+    : styles.checked + " " + styles.checkedOff;
+
   return (
     <li className={styles.filterRoom}>
       {!isLoading && (
@@ -47,7 +51,7 @@ const FilterRoomItem = ({
           <input
             id={id}
             type="checkbox"
-            className={filterCheckboxStyles}
+            className={styles.checkbox}
             checked={isChecked}
             aria-label={
               i18n.language === currentLanguages.EN ? ariaTextEn : ariaTextUk
@@ -58,7 +62,11 @@ const FilterRoomItem = ({
                 toggleNumberRoomsForFilter();
             }}
           />
-          <label className={styles.filterRoomText} htmlFor={id}>
+
+          <label className={styles.blogCheckboxDesc} htmlFor={id}>
+            <svg className={IconIsChecked}>
+              <use href="sprite.svg#icon-checked" />
+            </svg>
             {title}
             {t("Buttons.FilterQuantRooms")}
           </label>
