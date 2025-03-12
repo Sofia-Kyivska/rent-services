@@ -94,8 +94,11 @@
     content: '';
     display: block;
     position: absolute;
-    top: -7px;
+    // top: -7px;
+    // right: -8px;
+    top: 50%;
     right: -8px;
+    transform: translateY(-50%);
 
     font-family: GothamPro, sans-serif;
     width: 52px;
