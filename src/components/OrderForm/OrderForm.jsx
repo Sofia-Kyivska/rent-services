@@ -15,6 +15,7 @@ import { addDays, subDays } from "@/utils/dateUtils";
 import { sendToTelegram } from "@/utils/sendToTelegram";
 import { useFetcherObjectNumbers } from "@/hooks/useFetcher";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
+// import { useLockFormRecize } from "@/hooks/useLockFormRecize";
 import { useWindowResize } from "@/hooks/useWindowResize";
 import { getLocaleCalendar } from "@/utils/getLocaleCalendar";
 import SuccessContent from "./SuccessContent";
@@ -32,6 +33,7 @@ const OrderForm = ({ id = "" }) => {
     const { isMobile } = useWindowResize();
 
     useLockBodyScroll(isModalOpen);
+    // useLockFormRecize();
 
     const initialValues = {
         userName: "",

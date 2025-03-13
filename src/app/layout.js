@@ -1,7 +1,9 @@
 import './globals.scss';
+import Head from 'next/head';
 import Header from '@/components/Header/Header';
 import { SiteProvider } from '@/context/SiteContext';
 import dynamic from 'next/dynamic';
+
 // import CallBtnFloating from '@/components/CallBtnFloating/CallBtnFloating';
 
 // const lato = Lato({
@@ -124,9 +126,9 @@ export default function RootLayout({ children }) {
   };
   return (
     <html lang="uk-UA">
-      <head>
+      <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-      </head>
+      </Head>
       <body>
         <script
           type="application/ld+json"
