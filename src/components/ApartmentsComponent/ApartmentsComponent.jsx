@@ -144,7 +144,7 @@ const ApartmentsComponent = () => {
     : styles.filterButtonShown;
 
   const isButtonFilterShownInFilter = filterShown
-    ? styles.filterButtonShown
+    ? styles.filterButtonShown2
     : styles.filterButtonHidden;
 
   const isFilterContainerFull = filterShown
