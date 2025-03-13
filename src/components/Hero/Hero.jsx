@@ -21,8 +21,8 @@ const Hero = () => {
           </h2>
         </div>
         <div className={styles.btnsWraper}>
-          <OrderBtn className={styles.btn} />
-          <CallBtn className={styles.btn} />
+          <OrderBtn id={styles.btn} />
+          <CallBtn id={styles.btn} />
         </div>
       </div>
     </section>

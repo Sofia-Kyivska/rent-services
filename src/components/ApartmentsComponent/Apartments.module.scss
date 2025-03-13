@@ -89,6 +89,10 @@
 }
 
 .filterButtonShown {
+  // box-shadow: none;
+}
+.filterButtonShown2 {
+  box-shadow: none;
 }
 
 @keyframes blogShowOpenMobile {
@@ -119,9 +123,6 @@
   padding: 12px 16px;
   background-color: $Primary-50;
   animation: blogShowOpenMobile 1000ms ease-in-out;
-  & :first-child {
-    box-shadow: none;
-  }
 
   @media screen and (min-width: $tablet) {
     animation: blogShowOpenTablet 700ms ease-in-out;

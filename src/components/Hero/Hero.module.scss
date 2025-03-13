@@ -2,7 +2,7 @@
 
 .container {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   padding-top: 96px;
   padding-bottom: 80px;
 
@@ -30,6 +30,7 @@
     }
   }
   @media screen and (min-width: $tablet) {
+    height: 100vh;
     padding-top: 118px;
     padding-bottom: 0px;
   }
@@ -110,7 +111,7 @@
   }
 }
 
-.btn {
+#btn {
   width: 100%;
   border: none;
   border-radius: 8px;
@@ -118,9 +119,11 @@
   box-shadow: 2px 2px 4px 0 rgba(69, 73, 67, 0.25);
 
   @media screen and (min-width: $tablet) {
-    width: 151px;
+    width: 173px;
+    padding: 8px 32px;
   }
   @media screen and (min-width: $desktop) {
     width: 288px;
+    padding: 8px 58px;
   }
 }
