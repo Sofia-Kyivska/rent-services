@@ -1,5 +1,5 @@
 import './globals.scss';
-import Head from 'next/head';
+// import Head from 'next/head';
 import Header from '@/components/Header/Header';
 import { SiteProvider } from '@/context/SiteContext';
 import dynamic from 'next/dynamic';
@@ -25,6 +25,12 @@ const DynamicToastProvider = dynamic(() => import('@/context/ToastProvider'));
 const DynamicTranslatorProvider = dynamic(() => import('@/translator/i18Provider'));
 const DynamicAuthProvider = dynamic(() => import('@/components/AuthProvider/AuthProvider'));
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SEO_URL),
@@ -126,9 +132,9 @@ export default function RootLayout({ children }) {
   };
   return (
     <html lang="uk-UA">
-      <Head>
+      {/* <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-      </Head>
+      </Head> */}
       <body>
         <script
           type="application/ld+json"
