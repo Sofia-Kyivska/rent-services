@@ -1,23 +1,41 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-
-export function useLockFormRecize() {
+const useLockFormResize = () => {
     useEffect(() => {
-        const handleFocus = (e) => {
-            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-                document.body.style.overflow = 'hidden';
-            }
-        };
+        if (typeof window !== 'undefined') {
+            const handleGestureStart = (e) => {
+                e.preventDefault();  // Disable pinch-to-zoom
+            };
+            document.addEventListener('gesturestart', handleGestureStart);
+            return () => {
+                document.removeEventListener('gesturestart', handleGestureStart);
+            };
+        }
+    }, []);
+};
 
-        const handleBlur = () => {
-            document.body.style.overflow = 'auto';
-        };
-        window.addEventListener('focus', handleFocus);
-        window.addEventListener('blur', handleBlur);
+export default useLockFormResize;
 
-        return () => {
-            window.removeEventListener('focus', handleFocus);
-            window.removeEventListener('blur', handleBlur);
-        };
-    }, [])
-}
+
+
+// useEffect(() => {
+//     const handleFocus = (e) => {
+//         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+//             document.body.style.overflow = 'hidden';
+//         }
+//     };
+
+//     const handleBlur = () => {
+//         document.body.style.overflow = 'auto';
+//     };
+//     window.addEventListener('focus', handleFocus);
+//     window.addEventListener('blur', handleBlur);
+
+//     return () => {
+//         window.removeEventListener('focus', handleFocus);
+//         window.removeEventListener('blur', handleBlur);
+//     };
+// }, [])
+
+
+
