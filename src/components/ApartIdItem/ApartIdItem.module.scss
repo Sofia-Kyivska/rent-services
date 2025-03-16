@@ -68,7 +68,7 @@
   }
 }
 
-.addressBlock{
+.addressBlock {
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -79,6 +79,7 @@
   margin-bottom: 12px;
 
   @media screen and (min-width: $tablet) {
+    max-width: 740px;
     flex-direction: row;
     margin-bottom: 16px;
     font-size: 20px;
@@ -98,6 +99,7 @@
   align-items: center;
   column-gap: 4px;
   font-style: normal; 
+  word-break: break-word;
 
   @media screen and (min-width: $tablet) {
     column-gap: 12px;    
@@ -106,6 +108,7 @@
 
 .icon {
   width: 24px;
+  min-width: 24px;
   height: 24px;
   stroke: $Secondary-800;
   fill: $Secondary-800;
