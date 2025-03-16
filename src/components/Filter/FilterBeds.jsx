@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { currentLanguages } from "@/data";
 import styles from "./Filter.module.scss";
@@ -16,18 +16,30 @@ const FilterBeds = ({
   setIsFilterClear,
   lastCheckedBed,
 }) => {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(
+    (sessionStorage.getItem(id) === "true" ? true : false) || false
+  );
+  const hasMounted = useRef(false);
+  const hasMounted2 = useRef(false);
+
+  sessionStorage.setItem(id, isChecked);
 
   useEffect(() => {
-    setIsChecked(false);
-    setIsFilterClear(false);
+    if (hasMounted.current) {
+      setIsChecked(false);
+      setIsFilterClear(false);
+    } else {
+      hasMounted.current = true;
+    }
   }, [isFilterClear]);
 
   useEffect(() => {
-    isBedChecked();
+    if (hasMounted2.current) {
+      isBedChecked();
+    } else {
+      hasMounted2.current = true;
+    }
   }, [activeIndexBed]);
-  //   console.log(id);
-  //   console.log(activeIndexBed);
 
   const isBedChecked = () =>
     lastCheckedBed.value === value ? setIsChecked(true) : setIsChecked(false);
@@ -43,6 +55,7 @@ const FilterBeds = ({
         onChange={() => {
           setActiveIndexBed(id),
             isBedChecked(),
+            sessionStorage.setItem(id, isChecked),
             handleChooseBeds(),
             setIsFilterClear(false);
         }}
