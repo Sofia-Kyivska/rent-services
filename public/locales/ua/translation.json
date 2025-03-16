@@ -47,6 +47,10 @@
     "Apartments": "Апартаменти",
     "Rules": "Правила"
   },
+  "Filter":{
+    "Conditions":"Умови",
+    "Beds":"Спальні місця"
+  },
   "BreadCrumbs": {
     "BackLink": "Назад"
   },
