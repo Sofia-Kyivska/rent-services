@@ -92,6 +92,7 @@ const Filter = ({
   // console.log(lastCheckedBed);
 
   const handleResetFilter = () => {
+    if (activeIndex == 0) return;
     setIsFilterClear(true);
     setNumberBedsArr(() => []);
     lastCheckedBed.checked = false;
