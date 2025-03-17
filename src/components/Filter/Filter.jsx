@@ -94,6 +94,7 @@ const Filter = ({
   const handleResetFilter = () => {
     if (activeIndex === 0){  //якщо у фільтрі не обрані аменітіс
       if (activeIndexBed === 0) return; //якщо у фільтрі не обрані ліжка
+      setActiveIndexBed(0);
       setNumberBedsArr(() => []);
       lastCheckedBed.checked = false;
       return;
