@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { currentLanguages } from "@/data";
 import styles from "./FilterItem.module.scss";
@@ -15,14 +15,24 @@ const FilterItem = ({
   isFilterClear,
   setIsFilterClear,
 }) => {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(
+    (sessionStorage.getItem(id) === "true" ? true : false) || false
+  );
   const [isLoad, setIsLoad] = useState(true);
   const { i18n } = useTranslation();
+  const hasMounted = useRef(false);
+
+  sessionStorage.setItem(id, isChecked);
 
   useEffect(() => {
-    setIsChecked(false);
-    setIsFilterClear(false);
-    setAmenitiesArr([]);
+    if (hasMounted.current) {
+      setIsChecked(false);
+      setIsFilterClear(false);
+      setAmenitiesArr([]);
+      // code here only runs when syncWithMe changes!
+    } else {
+      hasMounted.current = true;
+    }
   }, [isFilterClear]);
 
   useEffect(() => {
@@ -71,8 +81,8 @@ const FilterItem = ({
             onChange={() => {
               setActiveIndex(id),
                 isAmenityChecked(),
-                toggleAmenityForFilter(),
-                setIsFilterClear(false);
+                sessionStorage.setItem(id, isChecked);
+              toggleAmenityForFilter(), setIsFilterClear(false);
             }}
           />
           <label className={styles.blogCheckboxDesc} htmlFor={id}>

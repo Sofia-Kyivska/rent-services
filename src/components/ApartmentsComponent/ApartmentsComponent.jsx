@@ -186,7 +186,10 @@ const ApartmentsComponent = () => {
           filteredAmenitiesData?.length <= 0 && (
             <div className={styles.notFoundTextStyles}>
               <p>
-                {notFoundText()} {t("ApartmentsPage.NotFound")}
+                {notFoundText()}{" "}
+                {notFoundText()
+                  ? t("ApartmentsPage.NotFound").toLowerCase()
+                  : t("ApartmentsPage.NotFound")}
               </p>
             </div>
           )}
@@ -250,7 +253,10 @@ const ApartmentsComponent = () => {
           filteredAmenitiesData?.length <= 0 && (
             <div className={styles.notFoundTextStyles}>
               <p>
-                {notFoundText()} {t("ApartmentsPage.NotFound")}
+                {notFoundText()}{" "}
+                {notFoundText()
+                  ? t("ApartmentsPage.NotFound").toLowerCase()
+                  : t("ApartmentsPage.NotFound")}
               </p>
             </div>
           )}
