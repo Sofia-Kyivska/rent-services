@@ -47,6 +47,10 @@
     "Apartments": "Apartments",
     "Rules": "Rules"
   },
+  "Filter":{
+    "Conditions":"Conditions",
+    "Beds":"Sleeping places"
+  },
   "BreadCrumbs": {
     "BackLink": "Back"
   },

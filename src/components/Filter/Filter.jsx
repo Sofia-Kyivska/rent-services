@@ -116,7 +116,7 @@ const Filter = ({
     <>
       <div className={isFilterShown}>
         <div className={styles.filterButtonsContainer}>
-          <p className={styles.inFilterHeader}>Умови</p>
+          <p className={styles.inFilterHeader}>{t("Filter.Conditions")}</p>
 
           <ul className={styles.filterAmenitisContainer}>
             {!isLoad &&
@@ -139,7 +139,7 @@ const Filter = ({
               })}
           </ul>
         </div>
-        <p className={styles.inFilterHeader}>Спальні місця</p>
+        <p className={styles.inFilterHeader}>{t("Filter.Beds")}</p>
         <ul className={styles.bedsList}>
           {data.map((item) => {
             return (
