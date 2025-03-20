@@ -92,21 +92,23 @@ const Filter = ({
   // console.log(lastCheckedBed);
 
   const handleResetFilter = () => {
-    if (activeIndex === 0){  //якщо у фільтрі не обрані аменітіс
+    if (activeIndex === 0) {
+      //якщо у фільтрі не обрані аменітіс
       if (activeIndexBed === 0) return; //якщо у фільтрі не обрані ліжка
+      // lastCheckedBed.value = 0;
+      setLastCheckedBed(0);
       setActiveIndexBed(0);
       setNumberBedsArr(() => []);
       lastCheckedBed.checked = false;
       return;
-    } 
-    
+    }
+
     setIsFilterClear(true);
-    
+
     if (activeIndexBed === 0) return;
-    
+
     setNumberBedsArr(() => []);
     lastCheckedBed.checked = false;
-
   };
 
   const isFilterShown = filterShown
