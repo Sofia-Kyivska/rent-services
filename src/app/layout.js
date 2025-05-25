@@ -3,6 +3,7 @@ import './globals.scss';
 import Header from '@/components/Header/Header';
 import { SiteProvider } from '@/context/SiteContext';
 import dynamic from 'next/dynamic';
+import { GoogleTagManager } from '@next/third-parties/google'
 
 // import CallBtnFloating from '@/components/CallBtnFloating/CallBtnFloating';
 
@@ -105,6 +106,7 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
+  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -135,7 +137,16 @@ export default function RootLayout({ children }) {
       {/* <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
       </Head> */}
+      <GoogleTagManager gtmId={`${GTM_ID}`} />
       <body>
+      <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
