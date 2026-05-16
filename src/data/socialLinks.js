@@ -5,9 +5,9 @@ export const socialLinks = [
   {
     id: v4(),
     title: 'Telephone',
-    subtitle: '+380 (95) 451 50 57',
+    subtitle: '+380 (50) 012 83 74',
     img: '/social-links/Telephone.webp',
-    href: 'tel:+380954515057',
+    href: 'tel:+380500128374',
     icon: '/sprite.svg#phone-new'
   },
   {
