@@ -1,6 +1,7 @@
 import { formatDate } from "@/utils/dateUtils";
 
-const TELEGRAM_CHAT_ID = "@SofiaRent24";
+// TG-group-name - starts with @
+const TELEGRAM_CHAT_ID = "@OurRentTestGroup";
 const telegramApi = process.env.TELEGRAM_API
 
 export const sendToTelegram = async (formData) => {
@@ -39,28 +40,26 @@ export const sendToTelegram = async (formData) => {
         ${textEnd}`;
     }
 
-    console.log('textTelegram:', text)
+    // console.log('textTelegram:', text)
 
-    // try {
-    //     const response = await fetch(telegramApi, {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             "Access-Control-Allow-Origin": "*",
-    //             "Access-Control-Allow-Methods": "POST",
-    //         },
-    //         body: JSON.stringify({
-    //             chat_id: TELEGRAM_CHAT_ID,
-    //             text,
-    //         }),
-    //     });
+    try {
+        const response = await fetch(telegramApi, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "POST",
+            },
+            body: JSON.stringify({
+                chat_id: TELEGRAM_CHAT_ID,
+                text,
+            }),
+        });
 
-    //     if (response.ok) {
-    //         console.log("To telegram sent:", formatedData);
-    //     } else {
-    //         throw new Error(response.statusText);
-    //     }
-    // } catch (error) {
-    //     console.log(error);
-    // }
+        if (!response.ok) {
+             throw new Error(response.statusText);
+        } 
+    } catch (error) {
+        console.log(error);
+    }
 }
